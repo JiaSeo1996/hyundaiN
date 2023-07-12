@@ -1,0 +1,92 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+.fs-default {
+  font-size: 3vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-default {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-default {
+    font-size: 2rem;
+  }
+}
+
+.fs-title {
+  font-size: 9vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-title {
+    font-size: 6rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-title {
+    font-size: 6rem;
+  }
+}
+
+.fs-subTitle {
+  font-size: 6vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-subTitle {
+    font-size: 4rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-subTitle {
+    font-size: 4rem;
+  }
+}
+
+#aboutN > section:not(#banner) {
+  width: 100%;
+  background: #FFFFFF;
+}
+@media all and (min-width: 1600px) {
+  #aboutN > section:not(#banner) {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+#aboutN > section:not(#banner) > .content {
+  width: 100%;
+  aspect-ratio: 16/9;
+  padding: 3.75rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.875rem;
+  background: no-repeat center/cover;
+  color: #FFFFFF;
+  text-align: center;
+}
+@media all and (max-width: 599px) {
+  #aboutN > section:not(#banner) > .content {
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#aboutN > section:not(#banner) > .content:nth-of-type(1) {
+  background-image: url("../assets/images/aboutN1.jpg");
+}
+
+/*# sourceMappingURL=aboutN.css.map */
