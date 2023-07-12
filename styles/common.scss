@@ -1,0 +1,415 @@
+@import "preset";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  background: #000000;
+}
+
+body {
+  width: 100%;
+  height: 100dvh;
+  position: relative;
+}
+
+html, body, p, span, h1, h2, h3, h4, h5, h6, a, textarea, input, button {
+  font-family: 'HyundaiSansHeadKR', sans-serif;
+  line-height: 110%;
+}
+
+a {
+  text-decoration: unset;
+  color: unset;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+#wrap {
+  width: 100%;
+  height: 100%;
+
+  > .background-fixed {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+  }
+
+  > header {
+    width: 100%;
+    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background: transparent;
+    transition: all .3s ease-in-out;
+
+    > nav {
+      width: 100%;
+      max-height: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      background: #000000;
+      transition: all .15s ease-in-out;
+
+      @include vp-xs {
+        height: 0;
+      }
+
+      > .list {
+        width: 100%;
+        margin-top: 3.5rem;
+        padding: 3.75rem calc((100% - 100rem) / 2);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        color: #FFFFFF;
+
+        @include vp-l {
+          padding: 3.75rem 1.875rem;
+        }
+
+        @include vp-m {
+          padding: 3.75rem 1.875rem;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+        }
+
+        @include vp-s {
+          padding: 3.75rem 1.875rem;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+        }
+
+        @include vp-xs {
+          padding: 2.5rem 1.25rem;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+        }
+
+        > .category {
+          width: calc(100% / 6);
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          align-items: start;
+          gap: 1.875rem;
+
+          @include vp-m {
+            width: 100%;
+          }
+
+          @include vp-s {
+            width: 100%;
+          }
+
+          @include vp-xs {
+            width: 100%;
+            gap: 1.25rem;
+          }
+
+          > .categoryName {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            > span {
+              font-size: 1.5rem;
+              font-weight: 500;
+              transition: all .15s ease-in-out;
+            }
+
+            > svg {
+              width: 1rem;
+              height: 1rem;
+              transition: all .15s ease-in-out;
+
+              @include vp-xl {
+                display: none;
+              }
+
+              @include vp-l {
+                display: none;
+              }
+
+              > path {
+                fill: #FFFFFF;
+              }
+            }
+
+            &.on {
+
+              > span {
+                color: $red-default;
+              }
+
+              > svg {
+                transform: rotateX(180deg);
+
+                > path {
+                  fill: $red-default;
+                }
+              }
+
+              & ~ .categoryDepth {
+                max-height: 100vh;
+              }
+            }
+          }
+
+          > .categoryDepth {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: .9375rem;
+            transition: all .15s ease-in-out;
+
+            @include vp-m {
+              max-height: 0;
+              overflow: hidden;
+            }
+
+            @include vp-s {
+              max-height: 0;
+              overflow: hidden;
+            }
+
+            @include vp-xs {
+              max-height: 0;
+              overflow: hidden;
+            }
+
+            > .item {
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+              align-items: stretch;
+              gap: .25rem;
+
+              > a {
+                padding-right: .25rem;
+                font-size: 1.25rem;
+                transition: all .15s ease-in-out;
+              }
+
+              > span {
+                width: 0;
+                height: .125rem;
+                background: $red-default;
+                transition: all .15s ease-in-out;
+              }
+
+              &:hover {
+
+                > a {
+                  color: $red-default;
+                }
+
+                > span {
+                  width: 100%;
+                }
+              }
+
+              &:last-of-type {
+
+                @include vp-m {
+                  margin-bottom: 3.75rem;
+                }
+
+                @include vp-s {
+                  margin-bottom: 3.75rem;
+                }
+
+                @include vp-xs {
+                  margin-bottom: 2.5rem;
+                }
+              }
+            }
+          }
+
+          &:has(.categoryDepth:hover) {
+
+            > .categoryName {
+
+              > span {
+                color: $red-default;
+              }
+            }
+          }
+        }
+      }
+
+      &.on {
+        max-height: 100vh;
+
+        @include vp-xs {
+          height: 100vh;
+        }
+      }
+    }
+
+    > .toggleWrap {
+      position: absolute;
+      left: calc((100% - 100rem) / 2);
+
+      @include vp-l {
+        left: 1.875rem;
+      }
+
+      @include vp-m {
+        left: 1.875rem;
+      }
+
+      @include vp-s {
+        left: 1.875rem;
+      }
+
+      @include vp-xs {
+        left: 1.25rem;
+      }
+
+      > .toggleBtn {
+        width: 1.5rem;
+        aspect-ratio: 1 / 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > span {
+          width: 100%;
+          height: .125rem;
+          position: absolute;
+          border-radius: .0625rem;
+          background: #FFFFFF;
+          opacity: 1;
+          transition: all .15s ease-in-out;
+
+          &:first-of-type {
+            top: .125rem;
+          }
+
+          &:last-of-type {
+            bottom: .125rem;
+          }
+        }
+
+        &.on > span {
+
+          &.erase {
+            opacity: 0;
+          }
+
+          &:nth-of-type(2) {
+            transform: rotate(45deg);
+          }
+
+          &:nth-of-type(3) {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    > .logo {
+      height: 2rem;
+      position: absolute;
+
+      > img {
+        height: 100%;
+      }
+    }
+
+    &.afterScroll {
+      background: #000000;
+    }
+  }
+
+  > main {
+    width: 100%;
+
+    > .gap {
+      width: 100%;
+      height: calc($gap-default * 6);
+      background: #FFFFFF;
+
+      @include vp-xs {
+        height: calc($gap-small * 6);
+      }
+    }
+
+    > #banner {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background: #000000;
+
+      @include vp-xs {
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+  }
+
+  > footer {
+    width: 100%;
+    padding: calc($gap-default * 2) $gap-default;
+    display: flex;
+    flex-direction: column;
+    gap: $gap-default;
+    background: #000000;
+    font-size: 2.625vw;
+    color: #FFFFFF;
+
+    @include vp-xl {
+      padding: calc($gap-default * 2) calc((100% - 100rem) /2);
+      font-size: 1.75rem;
+    }
+
+    @include vp-l {
+      font-size: 1.75rem;
+    }
+
+    @include vp-xs {
+      padding: calc($gap-small * 2) $gap-small;
+      gap: $gap-small;
+    }
+
+    > .notice {
+      width: 100%;
+      padding: $gap-default;
+      border: $border-default #FFFFFF;
+      font-weight: 500;
+
+      @include vp-xs {
+        padding: $gap-small;
+      }
+    }
+  }
+}

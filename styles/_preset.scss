@@ -1,0 +1,116 @@
+//breakpoints
+$bp-s: 600px;
+$bp-m: 960px;
+$bp-l: 1280px;
+$bp-xl: 1600px;
+
+//viewports
+@mixin vp-xs {
+  @media all and (max-width: #{$bp-s - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-s {
+  @media all and (min-width: #{$bp-s}) and (max-width: #{$bp-m - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-m {
+  @media all and (min-width: #{$bp-m}) and (max-width: #{$bp-l - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-l {
+  @media all and (min-width: #{$bp-l}) and (max-width: #{$bp-xl - 1px}) {
+    @content;
+  }
+}
+
+@mixin vp-xl {
+  @media all and (min-width: #{$bp-xl}) {
+    @content;
+  }
+}
+
+//gap
+$gap-default: 1.875rem;
+$gap-small: 1.25rem;
+
+
+//fonts
+@font-face {
+  font-family: 'HyundaiSansHeadKR';
+  font-style: normal;
+  font-weight: normal;
+  src: local('HyundaiSansHeadKR'),
+  url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'HyundaiSansHeadKR';
+  font-style: normal;
+  font-weight: 500;
+  src: local('HyundaiSansHeadKR'),
+  url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'HyundaiSansHeadKR';
+  font-style: normal;
+  font-weight: bold;
+  src: local('HyundaiSansHeadKR'),
+  url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+
+
+//borders
+$border-default: .0625rem solid;
+$border-thick: .125rem solid;
+$border-thicker: .1875rem solid;
+$border-thickest: .25rem solid;
+
+//colors
+$gray-default: #F6F3F2;
+$skyblue-default: #AACAE6;
+$red-default: #E63312;
+
+
+//font-size
+.fs-default {
+  font-size: 3vw;
+
+  @include vp-xl {
+    font-size: 2rem;
+  }
+
+  @include vp-l {
+    font-size: 2rem;
+  }
+}
+
+.fs-title {
+  font-size: 9vw;
+
+  @include vp-xl {
+    font-size: 6rem;
+  }
+
+  @include vp-l {
+    font-size: 6rem;
+  }
+}
+
+.fs-subTitle {
+  font-size: 6vw;
+
+  @include vp-xl {
+    font-size: 4rem;
+  }
+
+  @include vp-l {
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,706 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+.fs-default {
+  font-size: 3vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-default {
+    font-size: 2rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-default {
+    font-size: 2rem;
+  }
+}
+
+.fs-title {
+  font-size: 9vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-title {
+    font-size: 6rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-title {
+    font-size: 6rem;
+  }
+}
+
+.fs-subTitle {
+  font-size: 6vw;
+}
+@media all and (min-width: 1600px) {
+  .fs-subTitle {
+    font-size: 4rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  .fs-subTitle {
+    font-size: 4rem;
+  }
+}
+
+.background-fixed {
+  background: url("../assets/images/nCollection.jpg") no-repeat 50% 50%/cover;
+}
+
+section {
+  width: 100%;
+  background: #FFFFFF;
+}
+section .sectionTitle {
+  padding: 0 0.25rem;
+  border-bottom: 0.1875rem solid #AACAE6;
+  font-weight: bold;
+  line-height: 100%;
+}
+@media all and (min-width: 1600px) {
+  section .sectionTitle {
+    padding: 0 0.5rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  section .sectionTitle {
+    padding: 0 0.5rem;
+  }
+}
+section .more {
+  margin: 0 auto;
+  padding: 0.25rem 0.75rem;
+  border: 0.0625rem solid #AACAE6;
+}
+@media all and (min-width: 1600px) {
+  section .more {
+    padding: 0.5rem 1rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  section .more {
+    padding: 0.5rem 1rem;
+  }
+}
+
+#banner > .slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#banner > .slide > .item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  overflow: hidden;
+}
+#banner > .slide > .item > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner > .slide > .item > div > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#banner > .slide > .item > div > .text {
+  width: 100%;
+  height: 100%;
+  padding: 0 1.875rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.2);
+  color: #FFFFFF;
+}
+@media all and (min-width: 1600px) {
+  #banner > .slide > .item > div > .text {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #banner > .slide > .item > div > .text {
+    padding: 0 1.25rem;
+  }
+}
+#banner > .slide > .item > div > .text > h1 {
+  font-weight: bold;
+}
+#banner > .btn {
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  bottom: 4.5vw;
+}
+@media all and (min-width: 1600px) {
+  #banner > .btn {
+    width: 5rem;
+    height: 5rem;
+    bottom: unset;
+  }
+}
+#banner > .btn > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner > .btn > svg > path {
+  fill: rgba(255, 255, 255, 0.6);
+}
+#banner > .btn.prev {
+  left: 1.875rem;
+}
+@media all and (max-width: 599px) {
+  #banner > .btn.prev {
+    left: 1.25rem;
+  }
+}
+#banner > .btn.next {
+  right: 1.875rem;
+}
+@media all and (max-width: 599px) {
+  #banner > .btn.next {
+    right: 1.25rem;
+  }
+}
+#banner > .pagination {
+  height: 4.5vw;
+  position: absolute;
+  bottom: 4.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+@media all and (min-width: 1600px) {
+  #banner > .pagination {
+    height: 5rem;
+    bottom: 5rem;
+    gap: 0.5rem;
+  }
+}
+#banner > .pagination > .bullet {
+  width: 1.75rem;
+  height: 0.3875rem;
+  border-radius: 0.19375rem;
+  background: #FFFFFF;
+  transition: all 0.15s ease-in-out;
+}
+@media all and (min-width: 1600px) {
+  #banner > .pagination > .bullet {
+    width: 2rem;
+  }
+}
+@media all and (max-width: 599px) {
+  #banner > .pagination > .bullet {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+  }
+}
+#banner > .pagination > .bullet.active {
+  background: #E63312;
+}
+
+#origin {
+  width: 100%;
+  padding: 0;
+}
+@media all and (min-width: 1600px) {
+  #origin {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+#origin > .content {
+  width: 100%;
+  padding: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.875rem;
+  background: rgba(0, 0, 0, 0.4) url("../assets/images/photo-nurburgring.jpg") no-repeat 50% 50%/cover;
+  background-blend-mode: darken;
+  color: #FFFFFF;
+}
+@media all and (max-width: 599px) {
+  #origin > .content {
+    padding: 2.5rem;
+    gap: 1.25rem;
+  }
+}
+#origin > .content > h1 {
+  font-weight: 500;
+}
+#origin > .content > .more {
+  margin: unset;
+  border-color: #FFFFFF;
+}
+
+#models {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.875rem;
+  overflow: hidden;
+}
+@media all and (max-width: 599px) {
+  #models {
+    gap: 1.25rem;
+  }
+}
+#models > .sectionTitle {
+  margin-left: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #models > .sectionTitle {
+    margin-left: calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #models > .sectionTitle {
+    margin-left: 1.25rem;
+  }
+}
+#models > .slide {
+  width: 100%;
+  position: relative;
+}
+#models > .slide > .item {
+  width: 100%;
+  padding: 0 1.875rem;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #models > .slide > .item {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #models > .slide > .item {
+    padding: 0 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#models > .slide > .item > img {
+  width: 100%;
+}
+#models > .slide > .item > .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.9375rem;
+}
+@media all and (max-width: 599px) {
+  #models > .slide > .item > .info {
+    gap: 0.625rem;
+  }
+}
+#models > .slide > .item > .info > h2 {
+  font-weight: 500;
+}
+#models > .slide > .item > .info > h2 > strong {
+  font-weight: 500;
+  color: #E63312;
+}
+#models > .slide > .item > .info > .more {
+  margin: unset;
+}
+#models > .pagination {
+  height: 4.5vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+@media all and (min-width: 1600px) {
+  #models > .pagination {
+    height: auto;
+    gap: 0.5rem;
+  }
+}
+#models > .pagination > .bullet {
+  width: 1.75rem;
+  height: 0.3875rem;
+  border-radius: 0.19375rem;
+  background: #F6F3F2;
+  transition: all 0.15s ease-in-out;
+}
+@media all and (min-width: 1600px) {
+  #models > .pagination > .bullet {
+    width: 2rem;
+  }
+}
+@media all and (max-width: 599px) {
+  #models > .pagination > .bullet {
+    width: 1.5rem;
+    height: 0.25rem;
+    border-radius: 0.125rem;
+  }
+}
+#models > .pagination > .bullet.active {
+  background: #E63312;
+}
+#models > .btn {
+  width: 4.5vw;
+  height: 4.5vw;
+  position: absolute;
+  bottom: 0;
+}
+@media all and (min-width: 1600px) {
+  #models > .btn {
+    width: 5rem;
+    height: 5rem;
+    margin: auto 0;
+    bottom: unset;
+  }
+}
+#models > .btn > svg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#models > .btn > svg > path {
+  fill: #000000;
+}
+#models > .btn.prev {
+  left: 1.875rem;
+}
+@media all and (max-width: 599px) {
+  #models > .btn.prev {
+    left: 1.25rem;
+  }
+}
+#models > .btn.next {
+  right: 1.875rem;
+}
+@media all and (max-width: 599px) {
+  #models > .btn.next {
+    right: 1.25rem;
+  }
+}
+
+#pillars {
+  width: 100%;
+  padding: 0 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #pillars {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #pillars {
+    padding: 0 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#pillars > .content {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #pillars > .content {
+    aspect-ratio: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #pillars > .content {
+    aspect-ratio: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+@media all and (max-width: 599px) {
+  #pillars > .content {
+    aspect-ratio: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+#pillars > .content > .item {
+  width: 100%;
+  padding: 1.875rem;
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #pillars > .content > .item {
+    aspect-ratio: 2/1;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #pillars > .content > .item {
+    aspect-ratio: 2/1;
+  }
+}
+@media all and (max-width: 599px) {
+  #pillars > .content > .item {
+    aspect-ratio: 2/1;
+  }
+}
+#pillars > .content > .item:first-of-type {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background: #B0C5E0 url("../assets/images/pillar01.jpg") no-repeat 100% 100%/cover;
+  background-size: auto 80%;
+}
+#pillars > .content > .item:nth-of-type(2) {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background: #E63312 url("../assets/images/pillar02.jpg") no-repeat 100% 100%/cover;
+  background-size: auto 80%;
+  color: #FFFFFF;
+}
+#pillars > .content > .item:last-of-type {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  background: url("../assets/images/pillar03.jpg") no-repeat 100% 100%/cover;
+  color: #FFFFFF;
+}
+#pillars > .content > .item > h2 {
+  font-weight: 500;
+}
+
+#socialLounge {
+  padding: 3.75rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+  background: #F6F3F2;
+}
+@media all and (min-width: 1600px) {
+  #socialLounge {
+    padding: 3.75rem calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #socialLounge {
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#socialLounge > .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+@media all and (min-width: 1600px) {
+  #socialLounge > .content {
+    gap: 0.5rem;
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  #socialLounge > .content {
+    gap: 0.5rem;
+  }
+}
+#socialLounge > .content > .item {
+  width: calc((100% - 0.5rem) / 3);
+  aspect-ratio: 1/1;
+  position: relative;
+}
+@media all and (min-width: 1600px) {
+  #socialLounge > .content > .item {
+    width: calc((100% - 1rem) / 3);
+  }
+}
+@media all and (min-width: 1280px) and (max-width: 1599px) {
+  #socialLounge > .content > .item {
+    width: calc((100% - 1rem) / 3);
+  }
+}
+#socialLounge > .content > .item > img {
+  width: 100%;
+  height: 100%;
+}
+#socialLounge > .content > .item > .afterHover {
+  width: 100%;
+  height: 100%;
+  padding: 1.875rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.125rem solid #E63312;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+}
+@media all and (max-width: 599px) {
+  #socialLounge > .content > .item > .afterHover {
+    padding: 1.25rem;
+  }
+}
+#socialLounge > .content > .item > .afterHover:hover {
+  opacity: 1;
+}
+
+#nCollection {
+  width: 100%;
+  padding: 7.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.75rem;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
+  text-align: center;
+}
+@media all and (max-width: 599px) {
+  #nCollection {
+    padding: 5rem 0;
+    gap: 2.5rem;
+  }
+}
+#nCollection > .more {
+  border-color: #FFFFFF;
+}
+
+#news {
+  padding: 0 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #news {
+    padding: 0 calc((100% - 100rem) / 2);
+  }
+}
+@media all and (max-width: 599px) {
+  #news {
+    padding: 0 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#news > .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 0.5rem;
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #news > .content {
+    gap: 3.75rem;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #news > .content {
+    gap: 3.75rem;
+  }
+}
+@media all and (max-width: 599px) {
+  #news > .content {
+    gap: 2.5rem;
+  }
+}
+#news > .content > .item {
+  width: calc((100% - 1rem) / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #news > .content > .item {
+    width: 100%;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #news > .content > .item {
+    width: 100%;
+  }
+}
+@media all and (max-width: 599px) {
+  #news > .content > .item {
+    width: 100%;
+  }
+}
+#news > .content > .item > img {
+  width: 100%;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+}
+#news > .content > .item > p {
+  width: 100%;
+  padding: 0.5rem 0.9375rem;
+  font-weight: 500;
+}
+@media all and (max-width: 599px) {
+  #news > .content > .item > p {
+    padding: 0.25rem 0.625rem;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
