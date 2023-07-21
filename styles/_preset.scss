@@ -1,46 +1,30 @@
-//breakpoints
-$bp-s: 600px;
-$bp-m: 960px;
-$bp-l: 1280px;
-$bp-xl: 1600px;
-
-//viewports
-@mixin vp-xs {
-  @media all and (max-width: #{$bp-s - 1px}) {
+//viewport
+@mixin viewport-xs {
+  @media all and (min-width: 360px) and (max-width: 599px) {
     @content;
   }
 }
-
-@mixin vp-s {
-  @media all and (min-width: #{$bp-s}) and (max-width: #{$bp-m - 1px}) {
+@mixin viewport-s {
+  @media all and (min-width: 600px) and (max-width: 959px) {
     @content;
   }
 }
-
-@mixin vp-m {
-  @media all and (min-width: #{$bp-m}) and (max-width: #{$bp-l - 1px}) {
+@mixin viewport-m {
+  @media all and (min-width: 960px) and (max-width: 1279px) {
     @content;
   }
 }
-
-@mixin vp-l {
-  @media all and (min-width: #{$bp-l}) and (max-width: #{$bp-xl - 1px}) {
+@mixin viewport-l {
+  @media all and (min-width: 1280px) and (max-width: 1599px) {
     @content;
   }
 }
-
-@mixin vp-xl {
-  @media all and (min-width: #{$bp-xl}) {
+@mixin viewport-xl {
+  @media all and (min-width: 1600px) {
     @content;
   }
 }
-
-//gap
-$gap-default: 1.875rem;
-$gap-small: 1.25rem;
-
-
-//fonts
+//font-family
 @font-face {
   font-family: 'HyundaiSansHeadKR';
   font-style: normal;
@@ -48,7 +32,6 @@ $gap-small: 1.25rem;
   src: local('HyundaiSansHeadKR'),
   url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
 }
-
 @font-face {
   font-family: 'HyundaiSansHeadKR';
   font-style: normal;
@@ -56,7 +39,6 @@ $gap-small: 1.25rem;
   src: local('HyundaiSansHeadKR'),
   url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
 }
-
 @font-face {
   font-family: 'HyundaiSansHeadKR';
   font-style: normal;
@@ -64,53 +46,17 @@ $gap-small: 1.25rem;
   src: local('HyundaiSansHeadKR'),
   url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
 }
-
-
-//borders
-$border-default: .0625rem solid;
-$border-thick: .125rem solid;
-$border-thicker: .1875rem solid;
-$border-thickest: .25rem solid;
-
-//colors
-$gray-default: #F6F3F2;
-$skyblue-default: #AACAE6;
-$red-default: #E63312;
-
-
+//border-weight
+$border-weight-s: .0625rem solid;
+$border-weight-m: .125rem solid;
+$border-weight-l: .1875rem solid;
+$border-weight-xl: .25rem solid;
+//color
+$gray: #F6F3F2;
+$red: #E63312;
+$skyblue: #AACAE6;
 //font-size
-.fs-default {
-  font-size: 3vw;
-
-  @include vp-xl {
-    font-size: 2rem;
-  }
-
-  @include vp-l {
-    font-size: 2rem;
-  }
-}
-
-.fs-title {
-  font-size: 9vw;
-
-  @include vp-xl {
-    font-size: 6rem;
-  }
-
-  @include vp-l {
-    font-size: 6rem;
-  }
-}
-
-.fs-subTitle {
-  font-size: 6vw;
-
-  @include vp-xl {
-    font-size: 4rem;
-  }
-
-  @include vp-l {
-    font-size: 4rem;
-  }
-}
+$font-size-xs: clamp(.75rem, 2vw, 1rem);
+$font-size-s: clamp(.75rem, 3.5vw, 1.5rem);
+$font-size-m: clamp(1.5rem, 7vw, 3rem);
+$font-size-l: clamp(2.25rem, 10.5vw, 4.5rem);

@@ -1,0 +1,254 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+#history > #intro {
+  margin-bottom: 9.375rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > #intro {
+    margin-bottom: 6.25rem;
+  }
+}
+#history > .year {
+  width: 100%;
+  max-width: 100rem;
+  padding: 0 1.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: stretch;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year {
+    padding: 0 1.25rem;
+  }
+}
+#history > .year > p {
+  padding: 3.75rem 1.875rem 0 0;
+  border-right: 0.125rem solid #E63312;
+  font-size: clamp(1.5rem, 7vw, 3rem);
+  font-weight: bold;
+  color: #AACAE6;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > p {
+    padding: 2.5rem 1.25rem 0 0;
+  }
+}
+#history > .year > .content {
+  padding: 3.75rem 1.875rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 3.75rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content {
+    padding: 2.5rem 1.25rem;
+    gap: 2.5rem;
+  }
+}
+#history > .year > .content p, #history > .year > .content li {
+  line-height: 130%;
+}
+#history > .year > .content > .head {
+  width: 50%;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #history > .year > .content > .head {
+    width: 100%;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #history > .year > .content > .head {
+    width: 100%;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content > .head {
+    width: 100%;
+    gap: 1.25rem;
+  }
+}
+#history > .year > .content > .head > h1 {
+  font-size: clamp(2.25rem, 10.5vw, 4.5rem);
+  font-weight: bold;
+  line-height: 100%;
+}
+#history > .year > .content > .head > .summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.9375rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content > .head > .summary {
+    gap: 0.625rem;
+  }
+}
+#history > .year > .content > .head > .summary > li {
+  margin-left: 1.875rem;
+  font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+  font-weight: 500;
+  list-style-type: square;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content > .head > .summary > li {
+    margin-left: 1.25rem;
+  }
+}
+#history > .year > .content > .head > .summary > li::marker {
+  color: #E63312;
+}
+#history > .year > .content > img {
+  width: 50%;
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #history > .year > .content > img {
+    width: 80%;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #history > .year > .content > img {
+    width: 100%;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content > img {
+    width: 100%;
+  }
+}
+#history > .year > .content > .explain {
+  width: 50%;
+  margin-left: auto;
+  font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+  #history > .year > .content > .explain {
+    width: 100%;
+  }
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #history > .year > .content > .explain {
+    width: 100%;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year > .content > .explain {
+    width: 100%;
+  }
+}
+#history > .year > .content > video {
+  width: 100%;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+}
+#history > .year#y2013 {
+  background: #000000;
+  color: #FFFFFF;
+}
+#history > .year#y2014 {
+  background: url("../assets/images/history-2014.jpg") no-repeat center/cover;
+}
+#history > .year#y2014 img {
+  opacity: 0;
+}
+#history > .year#y2014 .explain {
+  color: #FFFFFF;
+}
+#history > .year#y2015 {
+  background: #000000;
+  color: #FFFFFF;
+}
+#history > .year#y2016 {
+  background: url("../assets/images/history-2016.jpg") no-repeat center/cover;
+  color: #FFFFFF;
+}
+#history > .year#y2016 img {
+  opacity: 0;
+}
+#history > .year#y2017 {
+  background: url("../assets/images/history-2017.jpg") no-repeat center/cover;
+}
+#history > .year#y2017 img {
+  opacity: 0;
+}
+#history > .year#y2017 .explain {
+  color: #FFFFFF;
+}
+#history > .year#y2018 {
+  background: #000000 url("../assets/images/history-2018.jpg") no-repeat center/100%;
+  color: #FFFFFF;
+}
+#history > .year#y2018 img {
+  opacity: 0;
+}
+#history > .year#y2019 {
+  background: #AACAE6;
+}
+#history > .year#y2019 > p {
+  color: #FFFFFF;
+}
+#history > .year#y2019 img {
+  width: 100%;
+}
+#history > .year#y2020 {
+  background: #000000 url("../assets/images/history-2020.jpg") no-repeat center/100%;
+  color: #FFFFFF;
+}
+#history > .year#y2020 img {
+  opacity: 0;
+}
+#history > .year#y2021 {
+  background: url("../assets/images/history-2021.jpg") no-repeat top/cover;
+}
+#history > .year#y2021 > p {
+  color: #FFFFFF;
+}
+#history > .year#y2021 img {
+  opacity: 0;
+}
+#history > .year#y2021 .explain {
+  color: #FFFFFF;
+}
+#history > .year#y2022 {
+  padding-bottom: 3.75rem;
+  background: #000000 url("../assets/images/history-2022.jpg") no-repeat top/cover;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #history > .year#y2022 {
+    padding-bottom: 2.5rem;
+  }
+}
+#history > .year#y2022 img {
+  opacity: 0;
+}
+#history > .year#y2022 .explain {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=history.css.map */

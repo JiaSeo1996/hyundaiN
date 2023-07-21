@@ -1,34 +1,233 @@
 @import "preset";
-
 #aboutN {
-
-  > section:not(#banner) {
-    width: 100%;
-    background: #FFFFFF;
-
-    @include vp-xl {
-      padding: 0 calc((100% - 100rem) / 2);
+  > #intro {
+    margin-bottom: 9.375rem;
+    @include viewport-xs {
+      margin-bottom: 6.25rem;
     }
-
+  }
+  > .point {
+    width: 100%;
+    max-width: 100rem;
+    aspect-ratio: 16 / 9;
+    padding: 3.75rem 1.875rem;
+    display: flex;
+    flex-direction: column;
+    background-blend-mode: darken;
+    color: #FFFFFF;
+    @include viewport-s {
+      aspect-ratio: 4 / 3;
+    }
+    @include viewport-xs {
+      aspect-ratio: 1 / 1;
+      padding: 2.5rem 1.25rem;
+    }
+    h1 {
+      font-size: $font-size-l;
+      font-weight: bold;
+      line-height: 100%;
+      > strong {
+        color: $red;
+      }
+    }
+    p {
+      font-size: $font-size-s;
+    }
+    &#slogan {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: rgba(0, 0, 0, .2) url("../assets/images/aboutN1.jpg") no-repeat center / cover;
+    }
+    &#exhilarating {
+      background: rgba(0, 0, 0 , .2) url("../assets/images/aboutN2.jpg") no-repeat center / cover;
+    }
+    &#accessible {
+      background: rgba(0, 0, 0, .1) url("../assets/images/aboutN3.jpg") no-repeat center / cover;
+    }
+    &#authentic {
+      background: url("../assets/images/aboutN4.jpg") no-repeat center / cover;
+    }
+    &#origin {
+      background: url("../assets/images/aboutN5.jpg") no-repeat center / cover;
+    }
+    &:not(#slogan) {
+      justify-content: space-between;
+      > p {
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+  }
+  > #birthplace {
+    width: 100%;
+    max-width: 100rem;
+    margin-top: 9.375rem;
+    padding: 0 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.875rem;
+    @include viewport-xl {
+      padding: 0;
+    }
+    @include viewport-xs {
+      margin-top: 6.25rem;
+      padding: 0 1.25rem;
+      gap: 1.25rem;
+    }
+    > h1 {
+      padding: 0 .25rem .25rem;
+      border-bottom: $border-weight-l $skyblue;
+      font-size: $font-size-l;
+      font-weight: bold;
+      line-height: 100%;
+    }
     > .content {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      padding: calc($gap-default * 2) $gap-default;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      gap: $gap-default;
-      background: no-repeat center / cover;
-      color: #FFFFFF;
-      text-align: center;
-
-      @include vp-xs {
-        padding: calc($gap-small * 2) $gap-small;
-        gap: $gap-small;
+      gap: 1.875rem;
+      @include viewport-xs {
+        gap: 1.25rem;
       }
-
-      &:nth-of-type(1) {
-        background-image: url("../assets/images/aboutN1.jpg");
+      > .item {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: .9375rem;
+        @include viewport-xs {
+          gap: .625rem;
+        }
+        > .image {
+          width: 100%;
+          aspect-ratio: 3 / 1;
+        }
+        > .text {
+          width: 100%;
+          margin-bottom: 3.75rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: stretch;
+          gap: .9375rem;
+          @include viewport-s {
+            flex-direction: column;
+          }
+          @include viewport-xs {
+            margin-bottom: 2.5rem;
+            flex-direction: column;
+            gap: .625rem;
+          }
+          > h2 {
+            width: 50%;
+            font-size: $font-size-m;
+            font-weight: 500;
+            line-height: 100%;
+            @include viewport-s {
+              width: 100%;
+            }
+            @include viewport-xs {
+              width: 100%;
+            }
+            > strong {
+              font-weight: 500;
+              color: $red;
+            }
+          }
+          > p {
+            width: 50%;
+            font-size: $font-size-s;
+            @include viewport-s {
+              width: 100%;
+            }
+            @include viewport-xs {
+              width: 100%;
+            }
+          }
+        }
+        &:nth-of-type(1) > .image {
+          background: url("../assets/images/namyang.jpg") no-repeat center fixed;
+          &.ios {
+            background: url("../assets/images/namyang.jpg") no-repeat center / cover;
+            @include viewport-xs {
+              aspect-ratio: 1 / 1;
+            }
+          }
+        }
+        &:nth-of-type(2) > .image {
+          background: url("../assets/images/european.jpg") no-repeat center fixed;
+          &.ios {
+            background: url("../assets/images/european.jpg") no-repeat center / cover;
+            @include viewport-xs {
+              aspect-ratio: 1 / 1;
+            }
+          }
+        }
+        &:nth-of-type(3) > .image {
+          background: url("../assets/images/track.jpg") no-repeat center fixed;
+          &.ios {
+            background: url("../assets/images/track.jpg") no-repeat center / cover;
+            @include viewport-xs {
+              aspect-ratio: 1 / 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  > #sub-nav {
+    width: 100%;
+    max-width: 100rem;
+    margin-top: 9.375rem;
+    padding: 0 1.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 1.875rem;
+    @include viewport-xl {
+      padding: 0;
+    }
+    @include viewport-xs {
+      margin-top: 6.25rem;
+      padding: 0 1.25rem;
+      gap: 1.25rem;
+    }
+    > h1 {
+      font-size: $font-size-l;
+      font-weight: bold;
+      line-height: 100%;
+    }
+    > .content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: .25rem;
+      > .nav-button {
+        width: calc((100% - .5rem) / 3);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: .9375rem;
+        @include viewport-xs {
+          gap: .625rem;
+        }
+        > img {
+          width: 100%;
+        }
+        > p {
+          font-size: $font-size-s;
+          font-weight: 500;
+        }
       }
     }
   }

@@ -1,648 +1,470 @@
 @import "preset";
-
-.background-fixed {
-  background: url("../assets/images/nCollection.jpg") no-repeat 50% 50% / cover;
+.section-title {
+  padding: 0 .25rem .25rem;
+  border-bottom: $border-weight-l $skyblue;
+  font-size: $font-size-l;
+  font-weight: bold;
+  line-height: 100%;
 }
-
-section {
-  width: 100%;
-  background: #FFFFFF;
-
-  .sectionTitle {
-    padding: 0 .25rem;
-    border-bottom: $border-thicker $skyblue-default;
-    font-weight: bold;
-    line-height: 100%;
-
-    @include vp-xl {
-      padding: 0 .5rem;
-    }
-
-    @include vp-l {
-      padding: 0 .5rem;
-    }
-  }
-
-  .more {
-    margin: 0 auto;
-    padding: .25rem .75rem;
-    border: $border-default $skyblue-default;
-
-    @include vp-xl {
-      padding: .5rem 1rem;
-    }
-
-    @include vp-l {
-      padding: .5rem 1rem;
-    }
-  }
+.more {
+  padding: .25rem .5rem;
+  border: $border-weight-s #FFFFFF;
+  font-size: $font-size-s;
 }
-
-#banner {
-
-  > .slide {
+#index {
+  gap: 9.375rem;
+  @include viewport-xs {
+    gap: 6.25rem;
+  }
+  > section {
     width: 100%;
-    height: 100%;
-    position: relative;
-
-    > .item {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 100%;
-      overflow: hidden;
-
-      > div {
+    &#intro {
+      > #intro-slide {
         width: 100%;
         height: 100%;
         position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        > video {
+        > .slide-item {
           width: 100%;
           height: 100%;
-          object-fit: cover;
-        }
-
-        > .text {
-          width: 100%;
-          height: 100%;
-          padding: 0 $gap-default;
           position: absolute;
           top: 0;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          background: rgba(0, 0, 0, .2);
-          color: #FFFFFF;
-
-          @include vp-xl {
-            padding: 0 calc((100% - 100rem) / 2);
+          left: 100%;
+          > .content {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            > .text {
+              width: 100%;
+              height: 100%;
+              padding: 0 1.875rem;
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: start;
+              background: rgba(0, 0, 0, .2);
+              color: #FFFFFF;
+              @include viewport-xl {
+                padding: 0 calc((100% - 100rem) / 2);
+              }
+              @include viewport-xs {
+                padding: 0 1.25rem;
+              }
+              > h1 {
+                font-size: $font-size-l;
+                font-weight: bold;
+                line-height: 110%;
+              }
+              > p {
+                font-size: $font-size-s;
+              }
+            }
           }
-
-          @include vp-xs {
-            padding: 0 $gap-small;
+        }
+      }
+      > .slide-control {
+        position: absolute;
+        bottom: 1.875rem;
+        @include viewport-xs {
+          bottom: .625rem;
+        }
+        > .pagination > .bullet {
+          background: #FFFFFF;
+          &.active {
+            background: $red;
           }
-
-          > h1 {
-            font-weight: bold;
+        }
+        > .move > .btn {
+          border-color: #FFFFFF;
+          > svg > path {
+            fill: #FFFFFF;
           }
         }
       }
     }
-  }
+    &:not(#intro, #social-lounge, #n-collection) {
+      max-width: 100rem;
+      &#origin {
+        padding: 5.625rem 1.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1.875rem;
+        background: rgba(0, 0, 0, .4) url("../assets/images/photo-nurburgring.jpg") no-repeat center / cover;
+        background-blend-mode: darken;
+        color: #FFFFFF;
+        @include viewport-xs {
+          padding: 3.75rem 1.25rem;
+          gap: 1.25rem;
+        }
+        > h1 {
+          font-size: $font-size-l;
+          font-weight: bold;
+          line-height: 110%;
+        }
+      }
+      &#models {
+        padding: 0 1.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.875rem;
+        @include viewport-xl {
+          padding: 0;
+        }
+        @include viewport-xs {
+          padding: 0 1.25rem;
+          gap: 1.25rem;
+        }
+        > #models-slide {
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          > .slide-item {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.875rem;
+            @include viewport-xs {
+              gap: 1.25rem;
+            }
+            > img {
+              width: 100%;
+              @include viewport-xl {
+                width: 50%;
+              }
+              @include viewport-l {
+                width: 50%;
+              }
+            }
+            > .info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: .9375rem;
+              @include viewport-xs {
+                gap: .625rem;
+              }
+              > p {
+                font-size: $font-size-m;
+                font-weight: 500;
+                line-height: 100%;
+                &:after {
+                  content: "\00a0N";
+                  color: $red;
+                }
+              }
+              > .more {
+                border-color: $skyblue;
+              }
+            }
+          }
+        }
+        > .slide-control {
+          padding: 0;
+          > .pagination > .bullet {
+            background: $gray;
+            &.active {
+              background: $red;
+            }
+          }
+        }
+      }
+      &#pillars {
+        padding: 0 1.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.875rem;
+        @include viewport-xl {
+          padding: 0;
+        }
+        @include viewport-xs {
+          padding: 0 1.25rem;
+          gap: 1.25rem;
+        }
+        > .content {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          @include viewport-xs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          @include viewport-s {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          @include viewport-m {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          > .item {
+            width: 100%;
+            padding: 3.75rem 1.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: 1.875rem;
+            @include viewport-xs {
+              padding: 2.5rem 1.25rem;
+              gap: 1.25rem;
+            }
+            > p {
+              line-height: 120%;
+              &:first-of-type {
+                font-size: $font-size-m;
+                font-weight: 500;
+              }
+              &:last-of-type {
+                font-size: $font-size-s;
+              }
+            }
+            &:nth-of-type(1) {
+              aspect-ratio: 2 / 1;
+              grid-column: 1 / 3;
+              grid-row: 1 / 2;
+              background: #B0C5E0 url("../assets/images/pillar01.jpg") no-repeat 100% 100% / cover;
+              background-size: 100% auto;
+              @include viewport-xs {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-s {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-m {
+                aspect-ratio: 16 / 9;
+              }
+            }
+            &:nth-of-type(2) {
+              aspect-ratio: 2 / 1;
+              grid-column: 1 / 3;
+              grid-row: 2 / 3;
+              background: $red url("../assets/images/pillar02.jpg") no-repeat 100% 100% / cover;
+              background-size: 100% auto;
+              color: #FFFFFF;
+              @include viewport-xs {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-s {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-m {
+                aspect-ratio: 16 / 9;
+              }
+            }
+            &:last-of-type {
+              aspect-ratio: 1 / 2;
+              grid-column: 3 / 4;
+              grid-row: 1 / 3;
+              background: url("../assets/images/pillar03.jpg") no-repeat 100% 100% / cover;
+              color: #FFFFFF;
+              @include viewport-xs {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-s {
+                aspect-ratio: 16 / 9;
+              }
+              @include viewport-m {
+                aspect-ratio: 16 / 9;
+              }
+            }
+          }
+        }
+      }
+      &#news {
+        padding: 0 1.875rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1.875rem;
+        @include viewport-xl {
+          padding: 0;
+        }
+        @include viewport-xs {
+          padding: 0 1.25rem;
+          gap: 1.25rem;
+        }
+        > .content {
+          width: 100%;
+          padding: 0 .0625rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: stretch;
+          gap: .0625rem;
+          background: $gray;
+          @include viewport-m {
+            padding: .0625rem 0;
+            flex-direction: column;
+          }
+          @include viewport-s {
+            padding: .0625rem 0;
+            flex-direction: column;
+          }
+          @include viewport-xs {
+            padding: .0625rem 0;
+            flex-direction: column;
+          }
+          > .item {
+            width: calc((100% - .125rem) / 3);
+            padding: 1.875rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            gap: .9375rem;
+            background: #FFFFFF;
+            @include viewport-m {
+              width: 100%;
+            }
+            @include viewport-s {
+              width: 100%;
+            }
+            @include viewport-xs {
+              width: 100%;
+              padding: 1.25rem;
+              gap: .625rem;
+            }
 
-  > .btn {
-    width: 4.5vw;
-    height: 4.5vw;
-    position: absolute;
-    bottom: 4.5vw;
-
-    @include vp-xl {
-      width: 5rem;
-      height: 5rem;
-      bottom: unset;
-    }
-
-    > svg {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      > path {
-        fill: rgba(255, 255, 255, .6);
+            > img {
+              width: 100%;
+            }
+            > p {
+              font-size: $font-size-s;
+              font-weight: 500;
+            }
+          }
+        }
       }
     }
-
-    &.prev {
-      left: $gap-default;
-
-      @include vp-xs {
-        left: $gap-small;
-      }
-    }
-
-    &.next {
-      right: $gap-default;
-
-      @include vp-xs {
-        right: $gap-small;
-      }
-    }
-  }
-
-  > .pagination {
-    height: 4.5vw;
-    position: absolute;
-    bottom: 4.5vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-
-    @include vp-xl {
-      height: 5rem;
-      bottom: 5rem;
-      gap: .5rem;
-    }
-
-    > .bullet {
-      width: 1.75rem;
-      height: .3875rem;
-      border-radius: .19375rem;
-      background: #FFFFFF;
-      transition: all .15s ease-in-out;
-
-      @include vp-xl {
-        width: 2rem;
-      }
-
-      @include vp-xs {
-        width: 1.5rem;
-        height: .25rem;
-        border-radius: .125rem;
-      }
-
-      &.active {
-        background: $red-default;
-      }
-    }
-  }
-}
-
-#origin {
-  width: 100%;
-  padding: 0;
-
-  @include vp-xl {
-    padding: 0 calc((100% - 100rem) / 2);
-  }
-
-  > .content {
-    width: 100%;
-    padding: calc($gap-default * 2);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: $gap-default;
-    background: rgba(0, 0, 0, .4) url("../assets/images/photo-nurburgring.jpg") no-repeat 50% 50% / cover;
-    background-blend-mode: darken;
-    color: #FFFFFF;
-
-    @include vp-xs {
-      padding: calc($gap-small * 2);
-      gap: $gap-small;
-    }
-
-    > h1 {
-      font-weight: 500;
-    }
-
-    > .more {
-      margin: unset;
-      border-color: #FFFFFF;
-    }
-  }
-}
-
-#models {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: start;
-  gap: $gap-default;
-  overflow: hidden;
-
-  @include vp-xs {
-    gap: $gap-small;
-  }
-
-  > .sectionTitle {
-    margin-left: $gap-default;
-
-    @include vp-xl {
-      margin-left: calc((100% - 100rem) / 2);
-    }
-
-    @include vp-xs {
-      margin-left: $gap-small;
-    }
-  }
-
-  > .slide {
-    width: 100%;
-    position: relative;
-
-    > .item {
-      width: 100%;
-      padding: 0 $gap-default;
-      position: absolute;
-      top: 0;
-      left: 100%;
+    &#social-lounge {
+      padding: 5.625rem 1.875rem;
       display: flex;
       flex-direction: column;
-      justify-content: start;
+      justify-content: center;
       align-items: center;
-      gap: $gap-default;
-
-      @include vp-xl {
-        padding: 0 calc((100% - 100rem) / 2);
+      gap: 1.875rem;
+      background: $gray;
+      @include viewport-xl {
+        padding: 5.625rem calc((100% - 100rem) / 2);
       }
-
-      @include vp-xs {
-        padding: 0 $gap-small;
-        gap: $gap-small;
+      @include viewport-xs {
+        padding: 3.75rem 1.25rem;
+        gap: 1.25rem;
       }
-
-      > img {
+      > .section-title {
+        margin-right: auto;
+      }
+      > .content {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: .25rem;
+        > .item {
+          width: calc((100% - .5rem) / 3);
+          aspect-ratio: 1 / 1;
+          position: relative;
+          > img {
+            width: 100%;
+            height: 100%;
+          }
+          > .afterHover {
+            width: 100%;
+            height: 100%;
+            padding: 1.875rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background: rgba(0, 0, 0, .6);
+            opacity: 0;
+            font-size: $font-size-s;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-align: center;
+            transition: all .15s ease-in-out;
+            @include viewport-xs {
+              padding: 1.25rem;
+            }
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
       }
-
-      > .info {
+    }
+    &#n-collection {
+      padding: 9.375rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3.75rem;
+      background: rgba(0, 0, 0, .4) url("../assets/images/nCollection.jpg") fixed;
+      background-blend-mode: darken;
+      box-shadow: inset 0 0 1rem #000000;
+      @include viewport-xs {
+        padding: 6.25rem;
+        gap: 2.5rem;
+      }
+      > .text {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: calc($gap-default / 2);
-
-        @include vp-xs {
-          gap: calc($gap-small / 2);
-        }
-
-        > h2 {
-          font-weight: 500;
-
-          > strong {
-            font-weight: 500;
-            color: $red-default;
-          }
-        }
-
-        > .more {
-          margin: unset;
-        }
-      }
-    }
-  }
-
-  > .pagination {
-    height: 4.5vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: .25rem;
-
-    @include vp-xl {
-      height: auto;
-      gap: .5rem;
-    }
-
-    > .bullet {
-      width: 1.75rem;
-      height: .3875rem;
-      border-radius: .19375rem;
-      background: $gray-default;
-      transition: all .15s ease-in-out;
-
-      @include vp-xl {
-        width: 2rem;
-      }
-
-      @include vp-xs {
-        width: 1.5rem;
-        height: .25rem;
-        border-radius: .125rem;
-      }
-
-      &.active {
-        background: $red-default;
-      }
-    }
-  }
-
-  > .btn {
-    width: 4.5vw;
-    height: 4.5vw;
-    position: absolute;
-    bottom: 0;
-
-    @include vp-xl {
-      width: 5rem;
-      height: 5rem;
-      margin: auto 0;
-      bottom: unset;
-    }
-
-    > svg {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      > path {
-        fill: #000000;
-      }
-    }
-
-    &.prev {
-      left: $gap-default;
-
-      @include vp-xs {
-        left: $gap-small;
-      }
-    }
-
-    &.next {
-      right: $gap-default;
-
-      @include vp-xs {
-        right: $gap-small;
-      }
-    }
-  }
-}
-
-#pillars {
-  width: 100%;
-  padding: 0 $gap-default;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: $gap-default;
-
-  @include vp-xl {
-    padding: 0 calc((100% - 100rem) / 2);
-  }
-
-  @include vp-xs {
-    padding: 0 $gap-small;
-    gap: $gap-small;
-  }
-
-  > .content {
-    width: 100%;
-    aspect-ratio: 2 / 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-
-    @include vp-m {
-      aspect-ratio: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-    }
-
-    @include vp-s {
-      aspect-ratio: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-    }
-
-    @include vp-xs {
-      aspect-ratio: unset;
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-    }
-
-    > .item {
-      width: 100%;
-      padding: $gap-default;
-
-      @include vp-m {
-        aspect-ratio: 2 / 1;
-      }
-
-      @include vp-s {
-        aspect-ratio: 2 / 1;
-      }
-
-      @include vp-xs {
-        aspect-ratio: 2 / 1;
-      }
-
-      &:first-of-type {
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
-        background: #B0C5E0 url("../assets/images/pillar01.jpg") no-repeat 100% 100% / cover;
-        background-size: auto 80%;
-      }
-
-      &:nth-of-type(2) {
-        grid-column: 1 / 3;
-        grid-row: 2 / 3;
-        background: $red-default url("../assets/images/pillar02.jpg") no-repeat 100% 100% / cover;
-        background-size: auto 80%;
-        color: #FFFFFF;
-      }
-
-      &:last-of-type {
-        grid-column: 3 / 4;
-        grid-row: 1 / 3;
-        background: url("../assets/images/pillar03.jpg") no-repeat 100% 100% / cover;
-        color: #FFFFFF;
-      }
-
-      > h2 {
-        font-weight: 500;
-      }
-    }
-  }
-}
-
-#socialLounge {
-  padding: calc($gap-default * 2) $gap-default;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: $gap-default;
-  background: $gray-default;
-
-  @include vp-xl {
-    padding: calc($gap-default * 2) calc((100% - 100rem) / 2);
-  }
-
-  @include vp-xs {
-    padding: calc($gap-small * 2) $gap-small;
-    gap: $gap-small;
-  }
-
-  > .content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: .25rem;
-
-    @include vp-xl {
-      gap: .5rem;
-    }
-
-    @include vp-l {
-      gap: .5rem;
-    }
-
-    > .item {
-      width: calc((100% - .5rem) / 3);
-      aspect-ratio: 1 / 1;
-      position: relative;
-
-      @include vp-xl {
-        width: calc((100% - 1rem) / 3);
-      }
-
-      @include vp-l {
-        width: calc((100% - 1rem) / 3);
-      }
-
-      > img {
-        width: 100%;
-        height: 100%;
-      }
-
-      > .afterHover {
-        width: 100%;
-        height: 100%;
-        padding: $gap-default;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: $border-thick $red-default;
-        background: rgba(0, 0, 0, .6);
-        opacity: 0;
-        font-weight: 500;
-        color: #FFFFFF;
         text-align: center;
-        transition: all .15s ease-in-out;
-
-        @include vp-xs {
-          padding: $gap-small;
+        color: #FFFFFF;
+        > h1 {
+          font-size: $font-size-l;
+          font-weight: bold;
+          line-height: 110%;
         }
-
-        &:hover {
-          opacity: 1;
+        > p {
+          font-size: $font-size-s;
+          line-height: 110%;
         }
+      }
+      > .more {
+        border-color: #FFFFFF;
+        color: #FFFFFF;
+      }
+      &.ios {
+        background: rgba(0, 0, 0, .4) url("../assets/images/nCollection.jpg") no-repeat center / cover;
       }
     }
   }
 }
 
-#nCollection {
-  width: 100%;
-  padding: calc($gap-default * 4) 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: calc($gap-default * 2);
-  background: rgba(0, 0, 0, .4);
-  box-shadow: inset 0 0 3rem rgba(0, 0, 0, .6);
-  color: #FFFFFF;
-  text-align: center;
-
-  @include vp-xs {
-    padding: calc($gap-small * 4) 0;
-    gap: calc($gap-small * 2);
-  }
-
-  > .more {
-    border-color: #FFFFFF;
-  }
-}
-
-#news {
-  padding: 0 $gap-default;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  gap: $gap-default;
-
-  @include vp-xl {
-    padding: 0 calc((100% - 100rem) / 2);
-  }
-
-  @include vp-xs {
-    padding: 0 $gap-small;
-    gap: $gap-small;
-  }
-
-  > .content {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: start;
-    gap: .5rem;
-
-    @include vp-m {
-      gap: calc($gap-default * 2);
-    }
-
-    @include vp-s {
-      gap: calc($gap-default * 2);
-    }
-
-    @include vp-xs {
-      gap: calc($gap-small * 2);
-    }
-
-    > .item {
-      width: calc((100% - 1rem) / 3);
-      display: flex;
-      flex-direction: column;
-      justify-content: start;
-      align-items: center;
-
-      @include vp-m {
-        width: 100%;
-      }
-
-      @include vp-s {
-        width: 100%;
-      }
-
-      @include vp-xs {
-        width: 100%;
-      }
-
-      > img {
-        width: 100%;
-        aspect-ratio: 2 / 1;
-        object-fit: cover;
-      }
-
-      > p {
-        width: 100%;
-        padding: .5rem calc($gap-default / 2);
-        font-weight: 500;
-
-        @include vp-xs {
-          padding: .25rem calc($gap-small / 2);
-        }
-      }
-    }
-  }
-}

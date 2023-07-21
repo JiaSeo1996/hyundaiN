@@ -1,0 +1,53 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+footer {
+  width: 100%;
+  padding: 3.75rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  background: #000000;
+  font-size: clamp(0.75rem, 2vw, 1rem);
+  color: #FFFFFF;
+}
+@media all and (min-width: 1600px) {
+  footer {
+    padding: 3.75rem calc((100% - 100rem) / 2);
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  footer {
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+}
+footer > .notice {
+  width: 100%;
+  padding: 1.875rem;
+  border: 0.0625rem solid #FFFFFF;
+  color: #FFFFFF;
+  font-weight: 500;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  footer > .notice {
+    padding: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=footer.css.map */

@@ -6,313 +6,299 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <script type="text/javascript" src="scripts/scroll.js"></script>
+  <script type="text/javascript" src="scripts/ios.js"></script>
   <script type="text/javascript" src="scripts/header.js"></script>
-  <script type="text/javascript" src="scripts/banner.js"></script>
-  <script type="text/javascript" src="scripts/models.js"></script>
+  <script type="text/javascript" src="scripts/introSlide.js"></script>
+  <script type="text/javascript" src="scripts/modelsSlide.js"></script>
 
   <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/footer.css">
 
-  <title>HYUNDAI N:Never Just Drive</title>
+  <title>N:Never Just Drive.</title>
 </head>
 <body>
 <div id="wrap">
-  <div class="background-fixed"></div>
   <header>
-    <nav>
-      <div class="list">
-        <ul class="category">
-          <li class="categoryName">
-            <span>Brand</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a href="aboutN.html">About N</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>History</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>DNA</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>People</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <ul class="category">
-          <li class="categoryName">
-            <span>Models</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a>N</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>N Line</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Rolling Lab</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Concept</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <ul class="category">
-          <li class="categoryName">
-            <span>Motorsport</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a>WRC</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>TCR</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Nürburgring 24 Hours</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <ul class="category">
-          <li class="categoryName">
-            <span>Experience</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a>Driving Experience</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>WorldSBK</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Hyundai N Festival</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <ul class="category">
-          <li class="categoryName">
-            <span>Media</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a>N-ZINE</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Press</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>Social Lounge</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-        <ul class="category">
-          <li class="categoryName">
-            <span>Merchandise</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
-              <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
-            </svg>
-          </li>
-          <li class="categoryDepth">
-            <div class="item">
-              <a>N Performance Parts</a>
-              <span></span>
-            </div>
-            <div class="item">
-              <a>N Collection</a>
-              <span></span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="toggleWrap">
-      <a class="toggleBtn">
-        <span class="erase"></span>
-        <span></span>
-        <span></span>
-        <span class="erase"></span>
-      </a>
-    </div>
-    <a class="logo" href="/">
+    <a class="header-logo" href="/">
       <img src="assets/images/logo.png">
     </a>
-    <div class="background-opacity"></div>
+    <nav>
+      <a class="toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="dropdown">
+        <div class="list">
+          <ul class="category">
+            <li class="name">
+              <span>Brand</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
+                <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
+              </svg>
+            </li>
+            <li class="depth">
+              <div class="item">
+                <a href="aboutN.html">About N</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a href="history.html">History</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>DNA</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a href="people.html">People</a>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="category">
+            <li class="name">
+              <span>Models</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
+                <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
+              </svg>
+            </li>
+            <li class="depth">
+              <div class="item">
+                <a>N</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>N Line</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>Rolling Lab</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>Concept</a>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="category">
+            <li class="name">
+              <span>Motorsport</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
+                <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
+              </svg>
+            </li>
+            <li class="depth">
+              <div class="item">
+                <a>WRC</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>TCR</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>Nürburgring 24 Hours</a>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="category">
+            <li class="name">
+              <span>Experience</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
+                <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
+              </svg>
+            </li>
+            <li class="depth">
+              <div class="item">
+                <a>Driving Experience</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>WorldSBK</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>Hyundai N Festival</a>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+          <ul class="category">
+            <li class="name">
+              <span>Merchandise</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" data-name="Isolation Mode" viewBox="0 0 24 24">
+                <path d="m0 8.057 9.52 9.507a3.507 3.507 0 0 0 4.948 0L24 8.046l-2.121-2.117-9.531 9.517a.5.5 0 0 1-.707 0L2.121 5.94Z"/>
+              </svg>
+            </li>
+            <li class="depth">
+              <div class="item">
+                <a>N Performance Parts</a>
+                <span></span>
+              </div>
+              <div class="item">
+                <a>N Collection</a>
+                <span></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
   <main id="index">
-    <section id="banner">
-      <ul class="slide">
-        <li class="item">
-          <div>
+    <section id="intro">
+      <ul id="intro-slide">
+        <li class="slide-item">
+          <div class="content">
             <video preload="metadata" muted="muted" playsinline>
               <source src="assets/videos/njd.mp4" type="video/mp4">
             </video>
             <div class="text">
-              <h1 class="fs-title">Never Just Drive</h1>
+              <h1>Never Just Drive.</h1>
             </div>
           </div>
         </li>
-        <li class="item">
-          <div>
+        <li class="slide-item">
+          <div class="content">
             <video preload="metadata" muted="muted" playsinline>
               <source src="assets/videos/vision74.mp4" type="video/mp4">
             </video>
             <div class="text">
-              <h1 class="fs-title">N Vision 74</h1>
-              <p class="fs-default">First Hydrogen Hybrid Rolling Lab</p>
+              <h1>N Vision 74</h1>
+              <p>First Hydrogen Hybrid Rolling Lab</p>
             </div>
           </div>
         </li>
-        <li class="item">
-          <div>
+        <li class="slide-item">
+          <div class="content">
             <video preload="metadata" muted="muted" playsinline>
               <source src="assets/videos/rn22e.mp4" type="video/mp4">
             </video>
             <div class="text">
-              <h1 class="fs-title">RN22e</h1>
-              <p class="fs-default">Rolling Lab with Maximized E-GMP Potential</p>
+              <h1>RN22e</h1>
+              <p>Rolling Lab with Maximized E-GMP Potential</p>
             </div>
           </div>
         </li>
       </ul>
-      <a class="btn prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
-          <path d="m16.752 23.994-9.873-9.873a3 3 0 0 1 0-4.242L16.746.012l1.414 1.414-9.867 9.867a1 1 0 0 0 0 1.414l9.873 9.873Z"/>
-        </svg>
-      </a>
-      <a class="btn next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">-->
-          <path d="M7.412 24 6 22.588l9.881-9.881a1 1 0 0 0 0-1.414L6.017 1.431 7.431.017l9.862 9.862a3 3 0 0 1 0 4.242Z"/>
-        </svg>
-      </a>
-      <div class="pagination"></div>
+      <div class="slide-control">
+        <div class="pagination"></div>
+        <div class="move">
+          <a class="btn prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
+              <path d="m16.752 23.994-9.873-9.873a3 3 0 0 1 0-4.242L16.746.012l1.414 1.414-9.867 9.867a1 1 0 0 0 0 1.414l9.873 9.873Z"/>
+            </svg>
+          </a>
+          <a class="btn next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">-->
+              <path d="M7.412 24 6 22.588l9.881-9.881a1 1 0 0 0 0-1.414L6.017 1.431 7.431.017l9.862 9.862a3 3 0 0 1 0 4.242Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
-    <div class="gap"></div>
     <section id="origin">
-      <article class="content">
-        <h1 class="fs-title">
-          Born in<br>
-          Namyang,<br>
-          Honed at<br>
-          Nürburgring
-        </h1>
-        <a class="more fs-default">Learn More ></a>
-      </article>
+      <h1>
+        Born in Namyang,<br>
+        Honed at Nürburgring
+      </h1>
+      <a class="more">Learn More ></a>
     </section>
-    <div class="gap"></div>
     <section id="models">
-      <h1 class="sectionTitle fs-title">Models</h1>
-      <ul class="slide">
-        <li class="item">
-          <img src="assets/images/car-elantraN.png">
+      <h2 class="section-title">Models</h2>
+      <ul id="models-slide">
+        <li class="slide-item">
+          <img src="assets/images/car-ioniqN.png">
           <div class="info">
-            <h2 class="fs-subTitle">ELANTRA <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
+            <p>IONIQ</p>
+            <a class="more">Learn More ></a>
           </div>
         </li>
-        <li class="item">
-          <img src="assets/images/car-konaN.png">
-          <div class="info">
-            <h2 class="fs-subTitle">KONA <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
-          </div>
-        </li>
-        <li class="item">
+        <li class="slide-item">
           <img src="assets/images/car-i20N.png">
           <div class="info">
-            <h2 class="fs-subTitle">i20 <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
+            <p>i20</p>
+            <a class="more">Learn More ></a>
           </div>
         </li>
-        <li class="item">
+        <li class="slide-item">
           <img src="assets/images/car-i30N.png">
           <div class="info">
-            <h2 class="fs-subTitle">i30 <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
+            <p>i30</p>
+            <a class="more">Learn More ></a>
           </div>
         </li>
-        <li class="item">
+        <li class="slide-item">
           <img src="assets/images/car-i30fastbackN.png">
           <div class="info">
-            <h2 class="fs-subTitle">i30 Fastback <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
+            <p>i30 Fastback</p>
+            <a class="more">Learn More ></a>
           </div>
         </li>
-        <li class="item">
+        <li class="slide-item">
           <img src="assets/images/car-velosterN.png">
           <div class="info">
-            <h2 class="fs-subTitle">VELOSTER <strong>N</strong></h2>
-            <a class="more fs-default">Learn More ></a>
+            <p>VELOSTER</p>
+            <a class="more">Learn More ></a>
+          </div>
+        </li>
+        <li class="slide-item">
+          <img src="assets/images/car-elantraN.png">
+          <div class="info">
+            <p>ELANTRA</p>
+            <a class="more">Learn More ></a>
+          </div>
+        </li>
+        <li class="slide-item">
+          <img src="assets/images/car-konaN.png">
+          <div class="info">
+            <p>KONA</p>
+            <div class="more">Learn More ></div>
           </div>
         </li>
       </ul>
-      <div class="pagination"></div>
-      <a class="btn prev">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
-          <path d="m16.752 23.994-9.873-9.873a3 3 0 0 1 0-4.242L16.746.012l1.414 1.414-9.867 9.867a1 1 0 0 0 0 1.414l9.873 9.873Z"/>
-        </svg>
-      </a>
-      <a class="btn next">
-        <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">-->
-          <path d="M7.412 24 6 22.588l9.881-9.881a1 1 0 0 0 0-1.414L6.017 1.431 7.431.017l9.862 9.862a3 3 0 0 1 0 4.242Z"/>
-        </svg>
-      </a>
+      <div class="slide-control">
+        <div class="pagination"></div>
+        <div class="move">
+          <a class="btn prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">
+              <path d="m16.752 23.994-9.873-9.873a3 3 0 0 1 0-4.242L16.746.012l1.414 1.414-9.867 9.867a1 1 0 0 0 0 1.414l9.873 9.873Z"/>
+            </svg>
+          </a>
+          <a class="btn next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 24 24">-->
+              <path d="M7.412 24 6 22.588l9.881-9.881a1 1 0 0 0 0-1.414L6.017 1.431 7.431.017l9.862 9.862a3 3 0 0 1 0 4.242Z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </section>
-    <div class="gap"></div>
     <section id="pillars">
-      <h1 class="sectionTitle fs-title">The Pillars of N</h1>
+      <h2 class="section-title">The Pillars of N</h2>
       <article class="content">
         <div class="item">
-          <h2 class="fs-subTitle">Corner Rascal</h2>
-          <p class="fs-default">Precise control for that unique carving feel throughout the corner.</p>
+          <p>Corner Rascal</p>
+          <p>Precise control for that unique carving feel throughout the corner.</p>
         </div>
         <div class="item">
-          <h2 class="fs-subTitle">Everyday Sports Car</h2>
-          <p class="fs-default">Easy to control, whether it’s your urban commute or thrilling track driving.</p>
+          <p>Everyday Sports Car</p>
+          <p>Easy to control, whether it’s your urban commute or thrilling track driving.</p>
         </div>
         <div class="item">
-          <h2 class="fs-subTitle">Race Track Capability</h2>
-          <p class="fs-default">Meant to be driven hard on the race track.</p>
+          <p>Race Track Capability</p>
+          <p>Meant to be driven hard on the racetrack.</p>
         </div>
       </article>
     </section>
-    <div class="gap"></div>
-    <section id="socialLounge">
-      <h1 class="sectionTitle fs-title">Social Lounge</h1>
-      <div class="content">
+    <section id="social-lounge">
+      <h2 class="section-title">Social Lounge</h2>
+      <article class="content">
         <a class="item" href="https://www.instagram.com/p/CpUU_jApeV1/" target="_blank">
           <img src="assets/images/socialLounge-1.jpg">
           <span class="afterHover fs-default">Hear thundering roar of i20 WRC in harmony with the sounds of the latest N models 📢</span>
@@ -349,35 +335,32 @@
           <img src="assets/images/socialLounge-9.jpg">
           <span class="afterHover fs-default">"It is such a versatile car that you can absolutely thrash around a racetrack or twisty mountain roads and drive home”</span>
         </a>
-      </div>
-    </section>
-    <div class="gap"></div>
-    <section id="nCollection">
-      <div class="text">
-        <h1 class="fs-title">Hyundai N Collection</h1>
-        <p class="fs-default">N collection that will bring you joy beyond driving</p>
-      </div>
-      <a class="more fs-default">Learn More ></a>
-    </section>
-    <div class="gap"></div>
-    <section id="news">
-      <h1 class="sectionTitle fs-title">News</h1>
-      <article class="content">
-        <a class="item">
-          <img src="assets/images/news-1.jpg">
-          <p class="fs-default">Back to winning ways in WRC</p>
-        </a>
-        <a class="item">
-          <img src="assets/images/news-2.jpg">
-          <p class="fs-default">Podium joy in Spa</p>
-        </a>
-        <a class="item">
-          <img src="assets/images/news-3.jpg">
-          <p class="fs-default">Rulers of the 'Ring'</p>
-        </a>
       </article>
     </section>
-    <div class="gap"></div>
+    <section id="n-collection" class="need-device-filter">
+      <div class="text">
+        <h1>Hyundai N Collection</h1>
+        <p>N collection that will bring you joy beyond driving</p>
+      </div>
+      <a class="more">Learn More ></a>
+    </section>
+    <section id="news">
+      <h2 class="section-title">News</h2>
+      <article class="content">
+        <div class="item">
+          <img src="assets/images/news-1.jpg">
+          <p>Back to winning ways in WRC</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/news-2.jpg">
+          <p>Podium joy in Spa</p>
+        </div>
+        <div class="item">
+          <img src="assets/images/news-3.jpg">
+          <p>Rulers of the 'Ring'</p>
+        </div>
+      </article>
+    </section>
   </main>
   <footer>
     <p class="notice">본 사이트는 비영리 목적(개인 포트폴리오 제작)으로 제작되었으며, 상업적인 사용 목적이 없음을 밝힙니다.</p>

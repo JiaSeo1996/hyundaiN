@@ -1,0 +1,28 @@
+@import "preset";
+footer {
+  width: 100%;
+  padding: 3.75rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  background: #000000;
+  font-size: $font-size-xs;
+  color: #FFFFFF;
+  @include viewport-xl {
+    padding: 3.75rem calc((100% - 100rem) / 2);
+  }
+  @include viewport-xs {
+    padding: 2.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+  > .notice {
+    width: 100%;
+    padding: 1.875rem;
+    border: $border-weight-s #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 500;
+    @include viewport-xs {
+      padding: 1.25rem;
+    }
+  }
+}

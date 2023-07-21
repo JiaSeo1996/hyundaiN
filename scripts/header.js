@@ -1,29 +1,19 @@
 $(document).ready(() => {
-    const header = $("header"),
-        toggle = $("header .toggleBtn"),
-        nav = $("nav"),
-        categoryName = $("nav .categoryName"),
-        categoryDepth = $("nav .categoryDepth");
-
-    var vpWidth = $(window).width();
-
-    toggle.click((e) => {
-        $(e.currentTarget).toggleClass("on");
-        nav.toggleClass("on");
+    $("nav > .toggle").click(() => {
+        $("nav > .toggle").toggleClass("on");
     })
 
-    categoryName.click((e) => {
-        if (vpWidth < 1280) {
+    $("nav > .dropdown > .list > .category > .name").click((e) => {
+        if ($(window).width() < 1280) {
             $(e.currentTarget).toggleClass("on");
         }
     })
 
     $(window).scroll(() => {
-
-        if ($(window).scrollTop() >= $("#banner").outerHeight()) {
-            header.addClass("afterScroll");
-        } else if ($(window).scrollTop() < $("#banner").outerHeight()) {
-            header.removeClass("afterScroll");
+        if($(window).scrollTop() >= $("#intro").outerHeight() / 3) {
+            $("header").addClass("afterScroll");
+        } else {
+            $("header").removeClass("afterScroll");
         }
     })
 })

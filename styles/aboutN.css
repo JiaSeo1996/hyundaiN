@@ -16,77 +16,274 @@
   font-weight: bold;
   src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
 }
-.fs-default {
-  font-size: 3vw;
+#aboutN > #intro {
+  margin-bottom: 9.375rem;
 }
-@media all and (min-width: 1600px) {
-  .fs-default {
-    font-size: 2rem;
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #intro {
+    margin-bottom: 6.25rem;
   }
 }
-@media all and (min-width: 1280px) and (max-width: 1599px) {
-  .fs-default {
-    font-size: 2rem;
-  }
-}
-
-.fs-title {
-  font-size: 9vw;
-}
-@media all and (min-width: 1600px) {
-  .fs-title {
-    font-size: 6rem;
-  }
-}
-@media all and (min-width: 1280px) and (max-width: 1599px) {
-  .fs-title {
-    font-size: 6rem;
-  }
-}
-
-.fs-subTitle {
-  font-size: 6vw;
-}
-@media all and (min-width: 1600px) {
-  .fs-subTitle {
-    font-size: 4rem;
-  }
-}
-@media all and (min-width: 1280px) and (max-width: 1599px) {
-  .fs-subTitle {
-    font-size: 4rem;
-  }
-}
-
-#aboutN > section:not(#banner) {
+#aboutN > .point {
   width: 100%;
-  background: #FFFFFF;
-}
-@media all and (min-width: 1600px) {
-  #aboutN > section:not(#banner) {
-    padding: 0 calc((100% - 100rem) / 2);
-  }
-}
-#aboutN > section:not(#banner) > .content {
-  width: 100%;
+  max-width: 100rem;
   aspect-ratio: 16/9;
   padding: 3.75rem 1.875rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.875rem;
-  background: no-repeat center/cover;
+  background-blend-mode: darken;
   color: #FFFFFF;
-  text-align: center;
 }
-@media all and (max-width: 599px) {
-  #aboutN > section:not(#banner) > .content {
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #aboutN > .point {
+    aspect-ratio: 4/3;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > .point {
+    aspect-ratio: 1/1;
     padding: 2.5rem 1.25rem;
+  }
+}
+#aboutN > .point h1 {
+  font-size: clamp(2.25rem, 10.5vw, 4.5rem);
+  font-weight: bold;
+  line-height: 100%;
+}
+#aboutN > .point h1 > strong {
+  color: #E63312;
+}
+#aboutN > .point p {
+  font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+}
+#aboutN > .point#slogan {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2) url("../assets/images/aboutN1.jpg") no-repeat center/cover;
+}
+#aboutN > .point#exhilarating {
+  background: rgba(0, 0, 0, 0.2) url("../assets/images/aboutN2.jpg") no-repeat center/cover;
+}
+#aboutN > .point#accessible {
+  background: rgba(0, 0, 0, 0.1) url("../assets/images/aboutN3.jpg") no-repeat center/cover;
+}
+#aboutN > .point#authentic {
+  background: url("../assets/images/aboutN4.jpg") no-repeat center/cover;
+}
+#aboutN > .point#origin {
+  background: url("../assets/images/aboutN5.jpg") no-repeat center/cover;
+}
+#aboutN > .point:not(#slogan) {
+  justify-content: space-between;
+}
+#aboutN > .point:not(#slogan) > p {
+  margin-left: auto;
+  text-align: right;
+}
+#aboutN > #birthplace {
+  width: 100%;
+  max-width: 100rem;
+  margin-top: 9.375rem;
+  padding: 0 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #aboutN > #birthplace {
+    padding: 0;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace {
+    margin-top: 6.25rem;
+    padding: 0 1.25rem;
     gap: 1.25rem;
   }
 }
-#aboutN > section:not(#banner) > .content:nth-of-type(1) {
-  background-image: url("../assets/images/aboutN1.jpg");
+#aboutN > #birthplace > h1 {
+  padding: 0 0.25rem 0.25rem;
+  border-bottom: 0.1875rem solid #AACAE6;
+  font-size: clamp(2.25rem, 10.5vw, 4.5rem);
+  font-weight: bold;
+  line-height: 100%;
+}
+#aboutN > #birthplace > .content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content {
+    gap: 1.25rem;
+  }
+}
+#aboutN > #birthplace > .content > .item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.9375rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item {
+    gap: 0.625rem;
+  }
+}
+#aboutN > #birthplace > .content > .item > .image {
+  width: 100%;
+  aspect-ratio: 3/1;
+}
+#aboutN > #birthplace > .content > .item > .text {
+  width: 100%;
+  margin-bottom: 3.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 0.9375rem;
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #aboutN > #birthplace > .content > .item > .text {
+    flex-direction: column;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item > .text {
+    margin-bottom: 2.5rem;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+}
+#aboutN > #birthplace > .content > .item > .text > h2 {
+  width: 50%;
+  font-size: clamp(1.5rem, 7vw, 3rem);
+  font-weight: 500;
+  line-height: 100%;
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #aboutN > #birthplace > .content > .item > .text > h2 {
+    width: 100%;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item > .text > h2 {
+    width: 100%;
+  }
+}
+#aboutN > #birthplace > .content > .item > .text > h2 > strong {
+  font-weight: 500;
+  color: #E63312;
+}
+#aboutN > #birthplace > .content > .item > .text > p {
+  width: 50%;
+  font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+}
+@media all and (min-width: 600px) and (max-width: 959px) {
+  #aboutN > #birthplace > .content > .item > .text > p {
+    width: 100%;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item > .text > p {
+    width: 100%;
+  }
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(1) > .image {
+  background: url("../assets/images/namyang.jpg") no-repeat center fixed;
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(1) > .image.ios {
+  background: url("../assets/images/namyang.jpg") no-repeat center/cover;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item:nth-of-type(1) > .image.ios {
+    aspect-ratio: 1/1;
+  }
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(2) > .image {
+  background: url("../assets/images/european.jpg") no-repeat center fixed;
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(2) > .image.ios {
+  background: url("../assets/images/european.jpg") no-repeat center/cover;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item:nth-of-type(2) > .image.ios {
+    aspect-ratio: 1/1;
+  }
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(3) > .image {
+  background: url("../assets/images/track.jpg") no-repeat center fixed;
+}
+#aboutN > #birthplace > .content > .item:nth-of-type(3) > .image.ios {
+  background: url("../assets/images/track.jpg") no-repeat center/cover;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #birthplace > .content > .item:nth-of-type(3) > .image.ios {
+    aspect-ratio: 1/1;
+  }
+}
+#aboutN > #sub-nav {
+  width: 100%;
+  max-width: 100rem;
+  margin-top: 9.375rem;
+  padding: 0 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.875rem;
+}
+@media all and (min-width: 1600px) {
+  #aboutN > #sub-nav {
+    padding: 0;
+  }
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #sub-nav {
+    margin-top: 6.25rem;
+    padding: 0 1.25rem;
+    gap: 1.25rem;
+  }
+}
+#aboutN > #sub-nav > h1 {
+  font-size: clamp(2.25rem, 10.5vw, 4.5rem);
+  font-weight: bold;
+  line-height: 100%;
+}
+#aboutN > #sub-nav > .content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+#aboutN > #sub-nav > .content > .nav-button {
+  width: calc((100% - 0.5rem) / 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0.9375rem;
+}
+@media all and (min-width: 360px) and (max-width: 599px) {
+  #aboutN > #sub-nav > .content > .nav-button {
+    gap: 0.625rem;
+  }
+}
+#aboutN > #sub-nav > .content > .nav-button > img {
+  width: 100%;
+}
+#aboutN > #sub-nav > .content > .nav-button > p {
+  font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=aboutN.css.map */
