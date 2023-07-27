@@ -18,291 +18,272 @@
 }
 header {
   width: 100%;
-  height: 3.5rem;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 9999;
-  background: transparent;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease;
 }
-header > .header-logo {
-  height: 2rem;
-  z-index: 9999;
-}
-header > .header-logo > img {
-  height: 100%;
-}
-header > nav {
+header > .inside {
   width: 100%;
+  max-width: 90rem;
   height: 3.5rem;
-  padding-left: 1.875rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-}
-@media all and (min-width: 1600px) {
-  header > nav {
-    padding-left: calc((100% - 100rem) / 2);
-  }
-}
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav {
-    padding-left: 1.25rem;
-  }
-}
-header > nav > .toggle {
-  width: 1.5rem;
-  aspect-ratio: 1/1;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
-header > nav > .toggle > span {
+@media all and (max-width: 599px) {
+  header > .inside {
+    height: 3rem;
+  }
+}
+header > .inside > #header-toggle {
+  width: 2rem;
+  aspect-ratio: 1/1;
+  margin-right: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 599px) {
+  header > .inside > #header-toggle {
+    width: 1.75rem;
+  }
+}
+header > .inside > #header-toggle > span {
   width: 100%;
   height: 0.125rem;
   position: absolute;
   border-radius: 0.0625rem;
   background: #FFFFFF;
-  opacity: 1;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease;
 }
-header > nav > .toggle > span:first-of-type {
-  top: 0.125rem;
+header > .inside > #header-toggle > span:first-of-type {
+  top: 0.25rem;
 }
-header > nav > .toggle > span:last-of-type {
-  bottom: 0.125rem;
+header > .inside > #header-toggle > span:last-of-type {
+  bottom: 0.25rem;
 }
-header > nav > .toggle.on > span:first-of-type, header > nav > .toggle.on > span:last-of-type {
+header > .inside > #header-toggle.on > span:first-of-type, header > .inside > #header-toggle.on > span:last-of-type {
   opacity: 0;
 }
-header > nav > .toggle.on > span:nth-of-type(2) {
+header > .inside > #header-toggle.on > span:nth-of-type(2) {
   transform: rotate(45deg);
 }
-header > nav > .toggle.on > span:nth-of-type(3) {
+header > .inside > #header-toggle.on > span:nth-of-type(3) {
   transform: rotate(-45deg);
 }
-header > nav > .dropdown {
+header > .inside > #header-logo {
+  height: 2rem;
+  position: absolute;
+}
+@media all and (max-width: 599px) {
+  header > .inside > #header-logo {
+    height: 1.75rem;
+  }
+}
+header > .inside > #header-logo > img {
+  height: 100%;
+}
+header > #header-dropdown {
   width: 100%;
-  max-height: 0;
+  max-height: 100dvh;
+  padding-top: 7rem;
+  padding-bottom: 3rem;
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  overflow: hidden;
   background: #000000;
-  transition: all 0.15s ease-in-out;
 }
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .dropdown {
-    height: 0;
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header > #header-dropdown {
+    height: 100dvh;
+    max-height: unset;
+    padding-top: 7rem;
+    padding-bottom: unset;
   }
 }
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .dropdown {
-    height: 0;
+@media all and (max-width: 599px) {
+  header > #header-dropdown {
+    height: 100dvh;
+    max-height: unset;
+    padding-top: 6rem;
+    padding-bottom: unset;
   }
 }
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .dropdown {
-    height: 0;
-  }
-}
-header > nav > .dropdown > .list {
+header > #header-dropdown > nav {
   width: 100%;
-  margin-top: 3.5rem;
-  padding: 3.75rem 1.875rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: start;
+  gap: 1.5rem;
   color: #FFFFFF;
 }
-@media all and (min-width: 1600px) {
-  header > nav > .dropdown > .list {
-    padding: 3.75rem calc((100% - 100rem) / 2);
-  }
-}
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .dropdown > .list {
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header > #header-dropdown > nav {
+    padding: 0 1.5rem;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    gap: 1.5rem;
   }
 }
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .dropdown > .list {
+@media all and (max-width: 599px) {
+  header > #header-dropdown > nav {
+    padding: 0 1rem;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    gap: 1rem;
   }
 }
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .dropdown > .list {
-    padding: 2.5rem 1.25rem;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-  }
-}
-header > nav > .dropdown > .list > .category {
-  width: 16.6666666667%;
+header > #header-dropdown > nav > .category {
+  width: 20%;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 1.875rem;
+  gap: 1.5rem;
 }
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .dropdown > .list > .category {
-    width: 100%;
+@media all and (min-width: 1440px) {
+  header > #header-dropdown > nav > .category:hover > .category-name {
+    color: #E63312;
   }
 }
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .dropdown > .list > .category {
-    width: 100%;
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  header > #header-dropdown > nav > .category:hover > .category-name {
+    color: #E63312;
   }
 }
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .dropdown > .list > .category {
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header > #header-dropdown > nav > .category {
     width: 100%;
-    gap: 1.25rem;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
   }
 }
-header > nav > .dropdown > .list > .category > .name {
+@media all and (max-width: 599px) {
+  header > #header-dropdown > nav > .category {
+    width: 100%;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+}
+header > #header-dropdown > nav > .category > .category-name {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-header > nav > .dropdown > .list > .category > .name > span {
-  font-size: clamp(1.5rem, 7vw, 2rem);
+  font-size: clamp(1.3125rem, 5.7vw, 1.6875rem);
   font-weight: 500;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease;
 }
-header > nav > .dropdown > .list > .category > .name > svg {
+header > #header-dropdown > nav > .category > .category-name > svg {
   width: 1rem;
   height: 1rem;
-  transition: all 0.15s ease-in-out;
 }
-@media all and (min-width: 1600px) {
-  header > nav > .dropdown > .list > .category > .name > svg {
+@media all and (min-width: 1440px) {
+  header > #header-dropdown > nav > .category > .category-name > svg {
     display: none;
   }
 }
-@media all and (min-width: 1280px) and (max-width: 1599px) {
-  header > nav > .dropdown > .list > .category > .name > svg {
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  header > #header-dropdown > nav > .category > .category-name > svg {
     display: none;
   }
 }
-header > nav > .dropdown > .list > .category > .name > svg > path {
+header > #header-dropdown > nav > .category > .category-name > svg > path {
   fill: #FFFFFF;
 }
-header > nav > .dropdown > .list > .category > .name.on > span {
+header > #header-dropdown > nav > .category > .category-name.on {
   color: #E63312;
 }
-header > nav > .dropdown > .list > .category > .name.on > svg {
+header > #header-dropdown > nav > .category > .category-name.on > svg {
   transform: rotateX(180deg);
 }
-header > nav > .dropdown > .list > .category > .name.on > svg > path {
+header > #header-dropdown > nav > .category > .category-name.on > svg > path {
   fill: #E63312;
 }
-header > nav > .dropdown > .list > .category > .depth {
+header > #header-dropdown > nav > .category > .category-name.on ~ .category-depth {
+  max-height: 100dvh;
+}
+header > #header-dropdown > nav > .category > .category-depth {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 0.9375rem;
-  transition: all 0.15s ease-in-out;
+  gap: 0.75rem;
+  transition: all 0.15s ease;
 }
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .dropdown > .list > .category > .depth {
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header > #header-dropdown > nav > .category > .category-depth {
     max-height: 0;
+    gap: 0.5rem;
     overflow: hidden;
   }
 }
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .dropdown > .list > .category > .depth {
+@media all and (max-width: 599px) {
+  header > #header-dropdown > nav > .category > .category-depth {
     max-height: 0;
+    gap: 0.5rem;
     overflow: hidden;
   }
 }
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .dropdown > .list > .category > .depth {
-    max-height: 0;
-    overflow: hidden;
-    gap: 0.625rem;
-  }
-}
-header > nav > .dropdown > .list > .category > .depth > .item {
+header > #header-dropdown > nav > .category > .category-depth > .category-depth-item {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: stretch;
+  align-items: start;
   gap: 0.25rem;
 }
-header > nav > .dropdown > .list > .category > .depth > .item > a {
-  padding-right: 0.25rem;
-  font-size: clamp(0.75rem, 3.5vw, 1.25rem);
-  transition: all 0.15s ease-in-out;
+@media all and (min-width: 1440px) {
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item {
+    padding-right: 0.25rem;
+  }
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item:hover > a {
+    color: #E63312;
+  }
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item:hover > span {
+    width: 100%;
+  }
 }
-header > nav > .dropdown > .list > .category > .depth > .item > span {
+@media all and (min-width: 1024px) and (max-width: 1439px) {
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item {
+    padding-right: 0.25rem;
+  }
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item:hover > a {
+    color: #E63312;
+  }
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item:hover > span {
+    width: 100%;
+  }
+}
+header > #header-dropdown > nav > .category > .category-depth > .category-depth-item > a {
+  font-size: clamp(0.875rem, 3.8vw, 1.125rem);
+  transition: all 0.15s ease;
+}
+header > #header-dropdown > nav > .category > .category-depth > .category-depth-item > span {
   width: 0;
   height: 0.125rem;
   background: #E63312;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease;
 }
-header > nav > .dropdown > .list > .category > .depth > .item:hover > a {
-  color: #E63312;
-}
-header > nav > .dropdown > .list > .category > .depth > .item:hover > span {
-  width: 100%;
-}
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .dropdown > .list > .category > .depth > .item:last-of-type {
-    margin-bottom: 3.75rem;
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item > span {
+    display: none;
   }
 }
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .dropdown > .list > .category > .depth > .item:last-of-type {
-    margin-bottom: 3.75rem;
-  }
-}
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .dropdown > .list > .category > .depth > .item:last-of-type {
-    margin-bottom: 2.5rem;
-  }
-}
-header > nav > .dropdown > .list > .category > .name.on ~ .depth {
-  max-height: 100vh;
-}
-header > nav > .dropdown > .list > .category:has(.depth:hover) > .name > span {
-  color: #E63312;
-}
-header > nav > .toggle.on ~ .dropdown {
-  max-height: 100vh;
-}
-@media all and (min-width: 960px) and (max-width: 1279px) {
-  header > nav > .toggle.on ~ .dropdown {
-    height: 100vh;
-  }
-}
-@media all and (min-width: 600px) and (max-width: 959px) {
-  header > nav > .toggle.on ~ .dropdown {
-    height: 100vh;
-  }
-}
-@media all and (min-width: 360px) and (max-width: 599px) {
-  header > nav > .toggle.on ~ .dropdown {
-    height: 100vh;
+@media all and (max-width: 599px) {
+  header > #header-dropdown > nav > .category > .category-depth > .category-depth-item > span {
+    display: none;
   }
 }
 header.afterScroll {

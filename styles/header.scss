@@ -1,59 +1,48 @@
 @import "preset";
 header {
   width: 100%;
-  height: 3.5rem;
   position: fixed;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 9999;
-  background: transparent;
-  transition: all .15s ease-in-out;
-  > .header-logo {
-    height: 2rem;
-    z-index: 9999;
-    > img {
-      height: 100%;
-    }
-  }
-  > nav {
+  transition: all .15s ease;
+  > .inside {
     width: 100%;
+    max-width: 90rem;
     height: 3.5rem;
-    padding-left: 1.875rem;
-    position: absolute;
-    top: 0;
-    left: 0;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
-    @include viewport-xl {
-      padding-left: calc((100% - 100rem) / 2);
+    z-index: 9999;
+    @include viewport-s {
+      height: 3rem;
     }
-    @include viewport-xs {
-      padding-left: 1.25rem;
-    }
-    > .toggle {
-      width: 1.5rem;
+    > #header-toggle {
+      width: 2rem;
       aspect-ratio: 1 / 1;
+      margin-right: auto;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      z-index: 9999;
+      @include viewport-s {
+        width: 1.75rem;
+      }
       > span {
         width: 100%;
         height: .125rem;
         position: absolute;
         border-radius: .0625rem;
         background: #FFFFFF;
-        opacity: 1;
-        transition: all .15s ease-in-out;
+        transition: all .15s ease;
         &:first-of-type {
-          top: .125rem;
+          top: .25rem;
         }
         &:last-of-type {
-          bottom: .125rem;
+          bottom: .25rem;
         }
       }
       &.on > span {
@@ -68,144 +57,152 @@ header {
         }
       }
     }
-    > .dropdown {
-      width: 100%;
-      max-height: 0;
+    > #header-logo {
+      height: 2rem;
       position: absolute;
-      top: 0;
-      left: 0;
+      @include viewport-s {
+        height: 1.75rem;
+      }
+      > img {
+        height: 100%;
+      }
+    }
+  }
+  > #header-dropdown {
+    width: 100%;
+    max-height: 100dvh;
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000000;
+    @include viewport-m {
+      height: 100dvh;
+      max-height: unset;
+      padding-top: 7rem;
+      padding-bottom: unset;
+    }
+    @include viewport-s {
+      height: 100dvh;
+      max-height: unset;
+      padding-top: 6rem;
+      padding-bottom: unset;
+    }
+    > nav {
+      width: 100%;
+      max-width: 90rem;
+      margin: 0 auto;
+      padding: 0 1.5rem;
       display: flex;
-      overflow: hidden;
-      background: #000000;
-      transition: all .15s ease-in-out;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: start;
+      gap: 1.5rem;
+      color: #FFFFFF;
       @include viewport-m {
-        height: 0;
+        padding: 0 1.5rem;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1.5rem;
       }
       @include viewport-s {
-        height: 0;
+        padding: 0 1rem;
+        flex-direction: column;
+        justify-content: start;
+        gap: 1rem;
       }
-      @include viewport-xs {
-        height: 0;
-      }
-      > .list {
-        width: 100%;
-        margin-top: 3.5rem;
-        padding: 3.75rem 1.875rem;
+      > .category {
+        width: 20%;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: start;
         align-items: start;
-        color: #FFFFFF;
+        gap: 1.5rem;
         @include viewport-xl {
-          padding: 3.75rem calc((100% - 100rem) / 2);
+          &:hover {
+            > .category-name {
+              color: $red;
+            }
+          }
+        }
+        @include viewport-l {
+          &:hover {
+            > .category-name {
+              color: $red;
+            }
+          }
         }
         @include viewport-m {
-          flex-direction: column;
-          justify-content: start;
-          align-items: start;
+          width: 100%;
+          padding: 0 1.5rem;
+          gap: 1.5rem;
         }
         @include viewport-s {
-          flex-direction: column;
-          justify-content: start;
-          align-items: start;
+          width: 100%;
+          padding: 0 1rem;
+          gap: 1rem;
         }
-        @include viewport-xs {
-          padding: 2.5rem 1.25rem;
-          flex-direction: column;
-          justify-content: start;
-          align-items: start;
+        > .category-name {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          font-size: $font-size-m;
+          font-weight: 500;
+          transition: all .15s ease;
+          > svg {
+            width: 1rem;
+            height: 1rem;
+            @include viewport-xl {
+              display: none;
+            }
+            @include viewport-l {
+              display: none;
+            }
+            > path {
+              fill: #FFFFFF;
+            }
+          }
+          &.on {
+            color: $red;
+            > svg {
+              transform: rotateX(180deg);
+              > path {
+                fill: $red;
+              }
+            }
+            & ~ .category-depth {
+              max-height: 100dvh;
+            }
+          }
         }
-        > .category {
-          width: calc(100% / 6);
+        > .category-depth {
           display: flex;
           flex-direction: column;
           justify-content: start;
           align-items: start;
-          gap: 1.875rem;
+          gap: .75rem;
+          transition: all .15s ease;
           @include viewport-m {
-            width: 100%;
+            max-height: 0;
+            gap: .5rem;
+            overflow: hidden;
           }
           @include viewport-s {
-            width: 100%;
+            max-height: 0;
+            gap: .5rem;
+            overflow: hidden;
           }
-          @include viewport-xs {
-            width: 100%;
-            gap: 1.25rem;
-          }
-          > .name {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            > span {
-              font-size: clamp(1.5rem, 7vw, 2rem);
-              font-weight: 500;
-              transition: all .15s ease-in-out;
-            }
-            > svg {
-              width: 1rem;
-              height: 1rem;
-              transition: all .15s ease-in-out;
-              @include viewport-xl {
-                display: none;
-              }
-              @include viewport-l {
-                display: none;
-              }
-              > path {
-                fill: #FFFFFF;
-              }
-            }
-            &.on {
-              > span {
-                color: $red;
-              }
-              > svg {
-                transform: rotateX(180deg);
-                > path {
-                  fill: $red;
-                }
-              }
-            }
-          }
-          > .depth {
+          > .category-depth-item {
             display: flex;
             flex-direction: column;
             justify-content: start;
             align-items: start;
-            gap: .9375rem;
-            transition: all .15s ease-in-out;
-            @include viewport-m {
-              max-height: 0;
-              overflow: hidden;
-            }
-            @include viewport-s {
-              max-height: 0;
-              overflow: hidden;
-            }
-            @include viewport-xs {
-              max-height: 0;
-              overflow: hidden;
-              gap: .625rem;
-            }
-            > .item {
-              display: flex;
-              flex-direction: column;
-              justify-content: start;
-              align-items: stretch;
-              gap: .25rem;
-              > a {
-                padding-right: .25rem;
-                font-size: clamp(.75rem, 3.5vw, 1.25rem);
-                transition: all .15s ease-in-out;
-              }
-              > span {
-                width: 0;
-                height: .125rem;
-                background: $red;
-                transition: all .15s ease-in-out;
-              }
+            gap: .25rem;
+            @include viewport-xl {
+              padding-right: .25rem;
               &:hover {
                 > a {
                   color: $red;
@@ -214,38 +211,37 @@ header {
                   width: 100%;
                 }
               }
-              &:last-of-type {
-                @include viewport-m {
-                  margin-bottom: 3.75rem;
+            }
+            @include viewport-l {
+              padding-right: .25rem;
+              &:hover {
+                > a {
+                  color: $red;
                 }
-                @include viewport-s {
-                  margin-bottom: 3.75rem;
-                }
-                @include viewport-xs {
-                  margin-bottom: 2.5rem;
+                > span {
+                  width: 100%;
                 }
               }
             }
-          }
-          > .name.on ~ .depth {
-            max-height: 100vh;
-          }
-          &:has(.depth:hover) > .name > span {
-            color: $red;
+            > a {
+              font-size: $font-size-s;
+              transition: all .15s ease;
+            }
+            > span {
+              width: 0;
+              height: .125rem;
+              background: $red;
+              transition: all .15s ease;
+              @include viewport-m {
+                display: none;
+              }
+              @include viewport-s {
+                display: none;
+              }
+            }
           }
         }
-      }
-    }
-    > .toggle.on ~ .dropdown {
-      max-height: 100vh;
-      @include viewport-m {
-        height: 100vh;
-      }
-      @include viewport-s {
-        height: 100vh;
-      }
-      @include viewport-xs {
-        height: 100vh;
+
       }
     }
   }

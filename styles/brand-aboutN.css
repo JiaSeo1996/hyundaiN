@@ -1,0 +1,205 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+#brand-aboutN strong {
+  color: #E63312;
+}
+#brand-aboutN > #content.wrap {
+  max-width: 90rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#brand-aboutN > #content.wrap > article {
+  padding: 3rem 1.5rem;
+  background-blend-mode: darken;
+  color: #FFFFFF;
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article {
+    padding: 2rem 1rem;
+  }
+}
+#brand-aboutN > #content.wrap > article > h1 {
+  font-size: clamp(2.1875rem, 9.5vw, 4.5rem);
+  line-height: 100%;
+}
+#brand-aboutN > #content.wrap > article > h2 {
+  font-size: clamp(1.75rem, 7.6vw, 2.25rem);
+  line-height: 120%;
+}
+#brand-aboutN > #content.wrap > article > p {
+  font-size: clamp(0.875rem, 3.8vw, 1.125rem);
+  font-weight: 500;
+  line-height: 120%;
+}
+#brand-aboutN > #content.wrap > article:not(#slogan, #name, #birthplace) {
+  width: 50%;
+  aspect-ratio: 4/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #brand-aboutN > #content.wrap > article:not(#slogan, #name, #birthplace) {
+    width: 100%;
+  }
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article:not(#slogan, #name, #birthplace) {
+    width: 100%;
+  }
+}
+#brand-aboutN > #content.wrap > article#slogan {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2) url("../assets/images/brand-aboutN01.jpg") no-repeat center/cover;
+  text-align: center;
+}
+#brand-aboutN > #content.wrap > article#exhilarating {
+  background: url("../assets/images/brand-aboutN02.jpg") no-repeat center/cover;
+}
+#brand-aboutN > #content.wrap > article#accessible {
+  background: url("../assets/images/brand-aboutN03.jpg") no-repeat center/cover;
+}
+#brand-aboutN > #content.wrap > article#authentic {
+  background: url("../assets/images/brand-aboutN04.jpg") no-repeat center/cover;
+}
+#brand-aboutN > #content.wrap > article#origin {
+  background: url("../assets/images/brand-aboutN05.jpg") no-repeat center/cover;
+}
+#brand-aboutN > #content.wrap > article#name {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(0, 0, 0, 0.4) url("../assets/images/photo-nurburgring.jpg") no-repeat center/cover;
+  text-align: center;
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#name {
+    gap: 1rem;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace {
+  margin-top: 10.5rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  color: #000000;
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#birthplace {
+    margin-top: 7rem;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-title {
+  margin-right: auto;
+  padding: 0 0.25rem 0.25rem;
+  border-bottom: 0.1875rem solid #AACAE6;
+  font-size: clamp(2.1875rem, 9.5vw, 4.5rem);
+  line-height: 100%;
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.25rem;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item {
+  width: 33.3333333333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  border: 0.0625rem solid #AACAE6;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item {
+    width: 100%;
+  }
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item {
+    width: 100%;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > img {
+    aspect-ratio: 4/3;
+  }
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > img {
+    aspect-ratio: 4/3;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > .text {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1.5rem;
+}
+@media all and (max-width: 599px) {
+  #brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > .text {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > .text > .where {
+  font-size: clamp(1.3125rem, 5.7vw, 1.6875rem);
+  font-weight: 500;
+}
+#brand-aboutN > #content.wrap > article#birthplace > .article-body > .birthplace-item > .text > .explain {
+  font-size: clamp(0.875rem, 3.8vw, 1.125rem);
+}
+
+/*# sourceMappingURL=brand-aboutN.css.map */

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+#brand-dna > #content {
+  max-width: 90rem;
+}
+
+/*# sourceMappingURL=brand-dna.css.map */

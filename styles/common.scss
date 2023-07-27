@@ -3,62 +3,120 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  touch-action: manipulation;
 }
 html {
   background: #000000;
+  font-family: 'HyundaiSansHeadKR', sans-serif;
   font-size: 16px;
 }
 body {
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
 a {
-  text-decoration: none;
+  text-decoration: unset;
   color: unset;
 }
 ul, ol, li {
   list-style: none;
 }
-html, body, a, p, h1, h2, h3, h4, h5, h6, span, input, textarea, button {
-  font-family: 'HyundaiSansHeadKR', sans-serif;
-}
-
 #wrap {
   width: 100%;
-  height: 100%;
   > main {
     width: 100%;
-    padding-bottom: 9.375rem;
+    padding-bottom: 10.5rem;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    gap: 10.5rem;
     background: #FFFFFF;
-    @include viewport-xs {
-      padding-bottom: 6.25rem;
+    @include viewport-s {
+      padding-bottom: 7rem;
+      gap: 7rem;
+    }
+    .slide-control {
+      width: 100%;
+      max-width: 90rem;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      @include viewport-s {
+        padding: 0 1rem;
+      }
+      > .slide-control-pagination {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: .25rem;
+        > .bullet {
+          width: .75rem;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          background: $darkgray;
+          opacity: .6;
+          transition: all .15s ease;
+          &.active {
+            width: 1rem;
+            background: $red;
+            opacity: 1;
+          }
+        }
+      }
+      > .slide-control-move {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        > a {
+          height: 2rem;
+          aspect-ratio: 1 / 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: $border-weight-s $skyblue;
+          border-radius: 50%;
+          > svg {
+            width: 50%;
+            height: 50%;
+            > path {
+              fill: $skyblue;
+            }
+          }
+        }
+      }
     }
     > #intro {
       width: 100%;
-      height: 100vh;
+      height: 100dvh;
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       overflow: hidden;
       background: #000000;
-      @include viewport-xs {
+      @include viewport-m {
         height: auto;
         aspect-ratio: 1 / 1;
       }
-      > video {
+      @include viewport-s {
+        height: auto;
+        aspect-ratio: 1 / 1;
+      }
+      video {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      > .text {
+      .text {
         width: 100%;
         height: 100%;
-        padding: 0 1.875rem;
+        padding: 0 1.5rem;
         position: absolute;
         top: 0;
         left: 0;
@@ -69,66 +127,31 @@ html, body, a, p, h1, h2, h3, h4, h5, h6, span, input, textarea, button {
         background: rgba(0, 0, 0, .2);
         color: #FFFFFF;
         @include viewport-xl {
-          padding: 0 calc((100% - 100rem) / 2);
+          padding: 0 calc((100% - 87rem) / 2);
         }
-        @include viewport-xs {
-          padding: 0 1.25rem;
+        @include viewport-s {
+          padding: 0 1rem;
         }
         > h1 {
-          font-size: $font-size-l;
-          font-weight: bold;
-          line-height: 110%;
+          font-size: $font-size-xl;
+          line-height: 160%;
         }
         > p {
           font-size: $font-size-s;
+          font-weight: 500;
+          line-height: 100%;
         }
       }
     }
-  }
-}
-.slide-control {
-  width: 100%;
-  max-width: 100rem;
-  padding: 0 1.875rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  @include viewport-xl {
-    padding: 0;
-  }
-  @include viewport-xs {
-    padding: 0 1.25rem;
-  }
-  > .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: .125rem;
-    > .bullet {
-      width: 1.5rem;
-      height: .25rem;
-      border-radius: .125rem;
-    }
-  }
-  > .move {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: .5rem;
-    > .btn {
-      height: 2rem;
-      aspect-ratio: 1 / 1;
+    > #content {
+      width: 100%;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: start;
       align-items: center;
-      border: $border-weight-s;
-      border-radius: 50%;
-      > svg {
-        width: 50%;
-        height: 50%;
+      overflow: hidden;
+      > article {
+        width: 100%;
       }
     }
   }

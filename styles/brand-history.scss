@@ -1,0 +1,177 @@
+@import "preset";
+#brand-history {
+  gap: 0 !important;
+  > #yearCounter {
+    width: 100%;
+    max-width: 90rem;
+    padding: 0.5rem;
+    position: sticky;
+    top: 3.5rem;
+    background: #FFFFFF;
+    @include viewport-s {
+      top: 3rem;
+    }
+    > .yearCounter-inside {
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > .year:not(:first-of-type) {
+        position: absolute;
+      }
+      input[type="radio"] {
+        display: none;
+        & ~ span {
+          opacity: 0;
+          font-size: $font-size-xl;
+          font-weight: bold;
+          color: $red;
+          transition: all .5s ease;
+        }
+        &:checked ~ span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  > #content {
+    > article {
+      max-width: 90rem;
+      padding: 3rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      @include viewport-s {
+        padding: 2rem 1rem 1rem;
+      }
+      > .head {
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 1.5rem;
+        @include viewport-s {
+          gap: 1rem;
+        }
+        > h2 {
+          font-size: $font-size-l;
+        }
+        > .summary {
+          font-size: $font-size-s;
+          > li {
+            margin-left: 1.5rem;
+            list-style: square;
+            font-weight: 500;
+            @include viewport-s {
+              margin-left: 1rem;
+            }
+            &::marker {
+              color: $red;
+            }
+          }
+        }
+      }
+      > .middle:not(#year2019 > .middle) {
+        width: 60%;
+        max-width: 40rem;
+        aspect-ratio: 1 / 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        > img {
+          width: 100%;
+        }
+      }
+      > .bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 3rem;
+        @include viewport-s {
+          gap: 2rem;
+        }
+        > .explain {
+          width: 50%;
+          font-size: $font-size-s;
+          @include viewport-s {
+            width: 100%;
+          }
+        }
+        > video {
+          width: 100%;
+          aspect-ratio: 3 / 1;
+          object-fit: cover;
+        }
+      }
+      &#year2012 {
+        padding: 0 1.5rem 1.5rem;
+        @include viewport-s {
+          padding: 0 1rem 1rem;
+        }
+      }
+      &#year2013 {
+        background: #000000;
+        color: #FFFFFF;
+      }
+      &#year2014 {
+        background: url("../assets/images/brand-history-2014.jpg") no-repeat center / cover;
+        .explain {
+          color: #FFFFFF;
+        }
+      }
+      &#year2015 {
+        background: #000000;
+        color: #FFFFFF;
+      }
+      &#year2016 {
+        background: url("../assets/images/brand-history-2016.jpg") no-repeat center / cover;
+        color: #FFFFFF;
+      }
+      &#year2017 {
+        background: url("../assets/images/brand-history-2017.jpg") no-repeat center / cover;
+        .explain {
+          color: #FFFFFF;
+        }
+      }
+      &#year2018 {
+        background: #000000 url("../assets/images/brand-history-2018.jpg") no-repeat center / 100%;
+        color: #FFFFFF;
+      }
+      &#year2019 {
+        background: #113768;
+        color: #FFFFFF;
+        .middle {
+          width: 100%;
+          aspect-ratio: 4 / 3;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          > img {
+            width: 100%;
+          }
+        }
+      }
+      &#year2020 {
+        background: #000000 url("../assets/images/brand-history-2020.jpg") no-repeat center / 100%;
+        color: #FFFFFF;
+      }
+      &#year2021 {
+        background: url("../assets/images/brand-history-2021.jpg") no-repeat center / cover;
+        .explain {
+          color: #FFFFFF;
+        }
+      }
+      &#year2022 {
+        background: url("../assets/images/brand-history-2022.jpg") no-repeat center / cover;
+        .explain {
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+}

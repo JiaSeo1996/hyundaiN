@@ -1,0 +1,164 @@
+@import "preset";
+#brand-aboutN {
+  strong {
+    color: $red;
+  }
+  > #content.wrap {
+    max-width: 90rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    > article {
+      padding: 3rem 1.5rem;
+      background-blend-mode: darken;
+      color: #FFFFFF;
+      @include viewport-s {
+        padding: 2rem 1rem;
+      }
+      > h1 {
+        font-size: $font-size-xl;
+        line-height: 100%;
+      }
+      > h2 {
+        font-size: $font-size-l;
+        line-height: 120%;
+      }
+      > p {
+        font-size: $font-size-s;
+        font-weight: 500;
+        line-height: 120%;
+      }
+      &:not(#slogan, #name, #birthplace) {
+        width: 50%;
+        aspect-ratio: 4 / 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        @include viewport-m {
+          width: 100%;
+        }
+        @include viewport-s {
+          width: 100%;
+        }
+      }
+      &#slogan {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, .2) url("../assets/images/brand-aboutN01.jpg") no-repeat center / cover;
+        text-align: center;
+      }
+      &#exhilarating {
+        background: url("../assets/images/brand-aboutN02.jpg") no-repeat center / cover;
+      }
+      &#accessible {
+        background: url("../assets/images/brand-aboutN03.jpg") no-repeat center / cover;
+      }
+      &#authentic {
+        background: url("../assets/images/brand-aboutN04.jpg") no-repeat center / cover;
+      }
+      &#origin {
+        background: url("../assets/images/brand-aboutN05.jpg") no-repeat center / cover;
+      }
+      &#name {
+        width: 100%;
+        aspect-ratio: 2 / 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        background: rgba(0, 0, 0, .4) url("../assets/images/photo-nurburgring.jpg") no-repeat center / cover;
+        text-align: center;
+        @include viewport-s {
+          gap: 1rem;
+        }
+      }
+      &#birthplace {
+        margin-top: 10.5rem;
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        color: #000000;
+        @include viewport-s {
+          margin-top: 7rem;
+          padding: 0 1rem;
+          gap: 1.5rem;
+        }
+        > .article-title {
+          margin-right: auto;
+          padding: 0 .25rem .25rem;
+          border-bottom: $border-weight-l $skyblue;
+          font-size: $font-size-xl;
+          line-height: 100%;
+        }
+        > .article-body {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: stretch;
+          gap: .25rem;
+          @include viewport-m {
+            flex-direction: column;
+            align-items: center;
+          }
+          @include viewport-s {
+            flex-direction: column;
+            align-items: center;
+          }
+          > .birthplace-item {
+            width: calc(100% / 3);
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            border: $border-weight-s $skyblue;
+            @include viewport-m {
+              width: 100%;
+            }
+            @include viewport-s {
+              width: 100%;
+            }
+            > img {
+              width: 100%;
+              aspect-ratio: 1 / 1;
+              object-fit: cover;
+              @include viewport-m {
+                aspect-ratio: 4 / 3;
+              }
+              @include viewport-s {
+                aspect-ratio: 4 / 3;
+              }
+            }
+            > .text {
+              width: 100%;
+              padding: 1.5rem;
+              display: flex;
+              flex-direction: column;
+              justify-content: start;
+              gap: 1.5rem;
+              @include viewport-s {
+                padding: 1rem;
+                gap: 1rem;
+              }
+              > .where {
+                font-size: $font-size-m;
+                font-weight: 500;
+              }
+              > .explain {
+                font-size: $font-size-s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

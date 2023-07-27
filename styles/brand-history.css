@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: normal;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: 500;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRMedium.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HyundaiSansHeadKR";
+  font-style: normal;
+  font-weight: bold;
+  src: local("HyundaiSansHeadKR"), url("../assets/fonts/HyundaiSansHeadKRBold.woff2") format("woff2");
+}
+#brand-history {
+  gap: 0 !important;
+}
+#brand-history > #yearCounter {
+  width: 100%;
+  max-width: 90rem;
+  padding: 0.5rem;
+  position: sticky;
+  top: 3.5rem;
+  background: #FFFFFF;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #yearCounter {
+    top: 3rem;
+  }
+}
+#brand-history > #yearCounter > .yearCounter-inside {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#brand-history > #yearCounter > .yearCounter-inside > .year:not(:first-of-type) {
+  position: absolute;
+}
+#brand-history > #yearCounter > .yearCounter-inside input[type=radio] {
+  display: none;
+}
+#brand-history > #yearCounter > .yearCounter-inside input[type=radio] ~ span {
+  opacity: 0;
+  font-size: clamp(2.1875rem, 9.5vw, 4.5rem);
+  font-weight: bold;
+  color: #E63312;
+  transition: all 0.5s ease;
+}
+#brand-history > #yearCounter > .yearCounter-inside input[type=radio]:checked ~ span {
+  opacity: 1;
+}
+#brand-history > #content > article {
+  max-width: 90rem;
+  padding: 3rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article {
+    padding: 2rem 1rem 1rem;
+  }
+}
+#brand-history > #content > article > .head {
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5rem;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article > .head {
+    gap: 1rem;
+  }
+}
+#brand-history > #content > article > .head > h2 {
+  font-size: clamp(1.75rem, 7.6vw, 2.25rem);
+}
+#brand-history > #content > article > .head > .summary {
+  font-size: clamp(0.875rem, 3.8vw, 1.125rem);
+}
+#brand-history > #content > article > .head > .summary > li {
+  margin-left: 1.5rem;
+  list-style: square;
+  font-weight: 500;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article > .head > .summary > li {
+    margin-left: 1rem;
+  }
+}
+#brand-history > #content > article > .head > .summary > li::marker {
+  color: #E63312;
+}
+#brand-history > #content > article > .middle:not(#year2019 > .middle) {
+  width: 60%;
+  max-width: 40rem;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#brand-history > #content > article > .middle:not(#year2019 > .middle) > img {
+  width: 100%;
+}
+#brand-history > #content > article > .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  gap: 3rem;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article > .bottom {
+    gap: 2rem;
+  }
+}
+#brand-history > #content > article > .bottom > .explain {
+  width: 50%;
+  font-size: clamp(0.875rem, 3.8vw, 1.125rem);
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article > .bottom > .explain {
+    width: 100%;
+  }
+}
+#brand-history > #content > article > .bottom > video {
+  width: 100%;
+  aspect-ratio: 3/1;
+  object-fit: cover;
+}
+#brand-history > #content > article#year2012 {
+  padding: 0 1.5rem 1.5rem;
+}
+@media all and (max-width: 599px) {
+  #brand-history > #content > article#year2012 {
+    padding: 0 1rem 1rem;
+  }
+}
+#brand-history > #content > article#year2013 {
+  background: #000000;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2014 {
+  background: url("../assets/images/brand-history-2014.jpg") no-repeat center/cover;
+}
+#brand-history > #content > article#year2014 .explain {
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2015 {
+  background: #000000;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2016 {
+  background: url("../assets/images/brand-history-2016.jpg") no-repeat center/cover;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2017 {
+  background: url("../assets/images/brand-history-2017.jpg") no-repeat center/cover;
+}
+#brand-history > #content > article#year2017 .explain {
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2018 {
+  background: #000000 url("../assets/images/brand-history-2018.jpg") no-repeat center/100%;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2019 {
+  background: #113768;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2019 .middle {
+  width: 100%;
+  aspect-ratio: 4/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#brand-history > #content > article#year2019 .middle > img {
+  width: 100%;
+}
+#brand-history > #content > article#year2020 {
+  background: #000000 url("../assets/images/brand-history-2020.jpg") no-repeat center/100%;
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2021 {
+  background: url("../assets/images/brand-history-2021.jpg") no-repeat center/cover;
+}
+#brand-history > #content > article#year2021 .explain {
+  color: #FFFFFF;
+}
+#brand-history > #content > article#year2022 {
+  background: url("../assets/images/brand-history-2022.jpg") no-repeat center/cover;
+}
+#brand-history > #content > article#year2022 .explain {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=brand-history.css.map */
